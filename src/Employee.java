@@ -3,6 +3,7 @@ import java.lang.reflect.Array;
 /**
  * Created by Joscha on 04.01.2017.
  */
+//List of all employed Persons
 public class Employee {
     //Constructor
     public Employee() {
