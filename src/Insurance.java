@@ -3,6 +3,8 @@ import java.util.Calendar;
 /**
  * Created by Joscha on 04.01.2017.
  */
+
+//Parent-Class for all Insurances
 abstract class Insurance {
     //Constructor
     public Insurance() {
@@ -16,14 +18,16 @@ abstract class Insurance {
     public Calendar startDate;
     public Calendar endDate;
     public float currentBalance;
-    //TODO protected Damage relatedDamages[];
+    protected Damage relatedDamages[];
     public int contactID
 
     //Methods
     //add new Damage to related Insurance
     //TODO implement method. Try/Catch? or Boolean?
-    public Boolean newDamage(){
-        return true;
+    public Damage [] newDamage(){
+        //TODO fill array
+        //Damage [] arr =
+        return arr;
     }
 
     //edit Damage
