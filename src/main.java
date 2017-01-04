@@ -1,3 +1,6 @@
 public class main {
-    Controller ProgramController = new Controller();
+    public static void main(String[] args) {
+        Controller ProgramController = new Controller();
+
+    }
 }
