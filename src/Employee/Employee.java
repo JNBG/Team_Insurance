@@ -18,17 +18,17 @@ public class Employee {
     public String role;
     public String agency;
     public int empID;
-    //TODO: private Customer.CustomerPerson currCustPers
-    //TODO: private Customer.CustomerEnterprise currCustEnt
+    //TODO: private customer.CustomerPerson currCustPers
+    //TODO: private customer.CustomerEnterprise currCustEnt
 
     //Methods
-    //add Customer.Customer to employee
-    //TODO: Needs Customer.Customer-Attributes from Customer.Customer Class
+    //add customer.customer to employee
+    //TODO: Needs customer.customer-Attributes from customer.customer Class
     public Boolean newCustomer (){
         return true;
     }
 
-    //edit a Customer.Customer of an employee
+    //edit a customer.customer of an employee
     //TODO: create method
     public Boolean editCustomer (){
         return true;
@@ -40,13 +40,13 @@ public class Employee {
         return true;
     }
 
-    //Acquires corresponding Customer.Customer-Person of Employee.Employee
+    //Acquires corresponding customer.customer-Person of Employee.Employee
     //TODO: create method
     public Boolean GetCurrCustPerson (){
         return true;
     }
 
-    //Acquires corresponding Customer.Customer-Enterprise of Employee.Employee
+    //Acquires corresponding customer.customer-Enterprise of Employee.Employee
     //TODO: create method
     public Boolean GetCurrCustEnt (){
         return true;

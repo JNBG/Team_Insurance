@@ -1,5 +1,5 @@
 package Search;
-import Customer.*;
+import customer.*;
 
 /**
  * Created by Philipp on 04.01.2017.
