@@ -1,6 +1,4 @@
-package Employee;
-
-import java.lang.reflect.Array;
+package employee;
 
 /**
  * Created by Joscha on 04.01.2017.
@@ -18,35 +16,35 @@ public class Employee {
     public String role;
     public String agency;
     public int empID;
-    //TODO: private Customer.CustomerPerson currCustPers
-    //TODO: private Customer.CustomerEnterprise currCustEnt
+    //TODO: private customer.CustomerPerson currCustPers
+    //TODO: private customer.CustomerEnterprise currCustEnt
 
     //Methods
-    //add Customer.Customer to employee
-    //TODO: Needs Customer.Customer-Attributes from Customer.Customer Class
+    //add customer.customer to employee
+    //TODO: Needs customer.customer-Attributes from customer.customer Class
     public Boolean newCustomer (){
         return true;
     }
 
-    //edit a Customer.Customer of an employee
+    //edit a customer.customer of an employee
     //TODO: create method
     public Boolean editCustomer (){
         return true;
     }
 
-    //add new Search.Search for objects associated with Employee.Employee
+    //add new search.search for objects associated with employee.employee
     //TODO: create method
     public Boolean newSearch(){
         return true;
     }
 
-    //Acquires corresponding Customer.Customer-Person of Employee.Employee
+    //Acquires corresponding customer.customer-Person of employee.employee
     //TODO: create method
     public Boolean GetCurrCustPerson (){
         return true;
     }
 
-    //Acquires corresponding Customer.Customer-Enterprise of Employee.Employee
+    //Acquires corresponding customer.customer-Enterprise of employee.employee
     //TODO: create method
     public Boolean GetCurrCustEnt (){
         return true;

@@ -1,6 +1,4 @@
-package Customer;
-
-import Customer.Customer;
+package customer;
 
 import java.util.Calendar;
 

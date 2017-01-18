@@ -1,4 +1,4 @@
-package Customer;
+package customer;
 
 /**
  * Created by Philipp on 04.01.2017.
@@ -11,12 +11,12 @@ abstract class Customer {
     public int zip;
     public String streetName;
     public int houseNumber;
-    public String communication;            // ways to contact a Customer.Customer
+    public String communication;            // ways to contact a customer.customer
     public String customerClass;            // v=vip, a=better/profit>3500, b=normal/profit>1000, p=potential customer, z=not worthy
     public String customerType;             // VN=Versicherungsnehmer, VP=versicherte Person, BZ=Beitragszahler
-    public Employee consultant;             // Employee.Employee responsible for the Customer.Customer
+    public Employee consultant;             // employee.employee responsible for the customer.customer
 
-    // TODO Customer.Customer.attributes
+    // TODO customer.customer.attributes
     protected Document listedDocuments[];
     protected Insurence insurenceList[];
 

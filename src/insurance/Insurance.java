@@ -1,4 +1,4 @@
-package Insurance;
+package insurance;
 
 import java.util.Calendar;
 
@@ -24,31 +24,31 @@ abstract class Insurance {
     public int contactID
 
     //Methods
-    //add new Damage.Damage to related Insurance.Insurance
+    //add new damage.damage to related insurance.insurance
     //TODO implement method. Try/Catch? or Boolean?
     public Damage[] newDamage(){
         //TODO fill array
-        //Damage.Damage [] arr =
+        //damage.damage [] arr =
         return arr;
     }
 
-    //edit Damage.Damage
+    //edit damage.damage
     //TODO implement method
     public Boolean editDamage(){
         return true;
     }
 
-    //toggle Active-Status of Insurance.Insurance, linked with endDate
+    //toggle Active-Status of insurance.insurance, linked with endDate
     //TODO implement method
     public void toggleActive (){
 
     }
 
-    //get corresponding damage to Insurance.Insurance
+    //get corresponding damage to insurance.insurance
     //TODO implement method
     public Damage[] getRelatedDamage (){
         //TODO fill array
-        //Damage.Damage [] arr =
+        //damage.damage [] arr =
         return arr;
     }
 }
