@@ -54,15 +54,18 @@ public class Login {
     }
 
     //TODO login.login.logout()
-    public Boolean logout(){
-        return true;
+    public void logout(){
+        this.isLoggedIn = false;
+        this.username = null;
+        this.password = null;
+        this.currEmployee = null;
     }
 
 
 
     // PRIVATE:
 
-    //TODO login.login.AutoLogout()
+    //TODO Login.AutoLogout()
     private void autoLogout(){
 
     }
