@@ -1,9 +1,13 @@
+package Customer;
+
+import Customer.Customer;
+
 import java.util.Calendar;
 
 /**
  * Created by Philipp on 04.01.2017.
  */
-public class CustomerPerson extends Customer{
+public class CustomerPerson extends Customer {
     public CustomerPerson() {
     }
 

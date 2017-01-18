@@ -1,3 +1,9 @@
+package DatabaseController;
+
+import Customer.Customer;
+import Document.Document;
+import Insurance.Insurance;
+
 /**
  * Created by Philipp on 04.01.2017.
  */

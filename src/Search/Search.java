@@ -1,3 +1,6 @@
+package Search;
+import Customer.*;
+
 /**
  * Created by Philipp on 04.01.2017.
  */
@@ -9,7 +12,7 @@ public class Search {
     private String criteria;
     private String searchString;
 
-    public Customer[] searchCustomer(){
-
+    public CustomerPerson[] searchCustomer(){
+        return null;
     }
 }

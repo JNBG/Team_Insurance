@@ -1,3 +1,5 @@
+package Insurance;
+
 /**
  * Created by Joscha on 04.01.2017.
  */
@@ -8,5 +10,5 @@ public class CompanyPensionScheme extends Insurance {
     }
 
     //Attributes
-    public CompanyEmployee [] employee;
+    public CompanyEmployee[] employee;
 }

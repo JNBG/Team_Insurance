@@ -1,3 +1,5 @@
+package Damage;
+
 import java.util.Calendar;
 
 /**
@@ -12,6 +14,6 @@ public class Damage {
     public String relatedInsuranceName;
     public Calendar dateOfIncident;
     public Calendar dateOfReport;
-    public int amountOfLoss;            // monetary Damage
-    public int reserve;                 // available Money to regulate the Damage
+    public int amountOfLoss;            // monetary Damage.Damage
+    public int reserve;                 // available Money to regulate the Damage.Damage
 }
