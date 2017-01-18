@@ -20,5 +20,20 @@ public class LoginTest {
         assertFalse(Paul.login());
     }
 
+    /* ###ZU TRIVIAL?###
+    @Test
+    public void loginCheck() throws Exception {
+        Login Max = new Login("Max", "whatevs");
+        Max.login();
+        assertTrue(Max.getIsLoggedIn());
+    }
+    */
 
+    @Test
+    public void logout () throws Exception {
+        Login Max = new Login("Max", "whatevs");
+        Max.login();
+        Max.logout();
+        assertFalse(Max.getIsLoggedIn());
+    }
 }
