@@ -2,9 +2,7 @@ package login;
 
 import employee.Employee;
 import databasecontroller.DatabaseController;
-/**
- * Created by Philipp on 04.01.2017.
- */
+
 public class Login {
 
     private Boolean isLoggedIn = false;
@@ -16,7 +14,6 @@ public class Login {
 
 
 
-    // CONSTRUCTOR
     public Login() {
     }
     public Login(String username, String password){
@@ -26,10 +23,10 @@ public class Login {
 
 
 
-    // METHODS:
-    // PUBLIC:
-
-    // used to login an Employee, gets username and password and checks the login
+    /**
+     * Used to login an Employee
+     * returns true if this.password matches the password given by the DatabaseController. Else returns false
+     * */
     public Boolean login(){
         DatabaseController dBConLogin = new DatabaseController();
         String returnedPassword = dBConLogin.searchLogin(this.username);
@@ -48,12 +45,15 @@ public class Login {
         }
     }
 
-    // returns the status of the current Login
     public Boolean getIsLoggedIn(){
         return isLoggedIn;
     }
 
-    //TODO login.login.logout()
+    /**
+     * Logs out the current Employee
+     * returns void
+     * makes this instance useless
+     */
     public void logout(){
         this.isLoggedIn = false;
         this.username = null;
@@ -62,10 +62,11 @@ public class Login {
     }
 
 
-
-    // PRIVATE:
-
     //TODO Login.AutoLogout()
+
+    /**
+     * Logs out the current Employee after n Minutes of Idletime
+     */
     private void autoLogout(){
 
     }
