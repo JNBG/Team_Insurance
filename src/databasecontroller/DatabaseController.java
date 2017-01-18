@@ -1,3 +1,6 @@
+/**
+ *
+ */
 package databasecontroller;
 
 import java.util.Objects;
@@ -9,9 +12,6 @@ import customer.CustomerEnterprise;
 import document.Document;
 
 
-/**
- * Created by Philipp on 04.01.2017.
- */
 public class DatabaseController {
     public DatabaseController() {
     }

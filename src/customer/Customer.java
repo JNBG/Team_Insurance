@@ -1,3 +1,6 @@
+/**
+ *
+ */
 package customer;
 
 import java.util.Objects;
@@ -12,9 +15,6 @@ import insurance.GroupAccidentInsurance;
 import insurance.HealthInsurance;
 
 
-/**
- * Created by Philipp on 04.01.2017.
- */
 abstract class Customer {
     public Customer() {
     }

@@ -1,8 +1,8 @@
+/**
+ *
+ */
 package insurance;
 
-/**
- * Created by Joscha on 04.01.2017.
- */
 
 //Sub-subclass for list of employees of external Companies
 public class CompanyEmployee{
