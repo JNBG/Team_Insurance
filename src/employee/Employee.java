@@ -1,6 +1,4 @@
-package Employee;
-
-import java.lang.reflect.Array;
+package employee;
 
 /**
  * Created by Joscha on 04.01.2017.
@@ -34,19 +32,19 @@ public class Employee {
         return true;
     }
 
-    //add new Search.Search for objects associated with Employee.Employee
+    //add new search.search for objects associated with employee.employee
     //TODO: create method
     public Boolean newSearch(){
         return true;
     }
 
-    //Acquires corresponding customer.customer-Person of Employee.Employee
+    //Acquires corresponding customer.customer-Person of employee.employee
     //TODO: create method
     public Boolean GetCurrCustPerson (){
         return true;
     }
 
-    //Acquires corresponding customer.customer-Enterprise of Employee.Employee
+    //Acquires corresponding customer.customer-Enterprise of employee.employee
     //TODO: create method
     public Boolean GetCurrCustEnt (){
         return true;

@@ -1,4 +1,4 @@
-package Login;
+package login;
 
 /**
  * Created by Philipp on 04.01.2017.
@@ -6,8 +6,8 @@ package Login;
 public class Login {
 
     private Boolean isLoggedIn = false;
-    // TODO Login.Login.LogoutTimer: private int logoutTimer
-    // TODO Login.Login.Employee.Employee: public Employee.Employee currEmployee
+    // TODO login.login.LogoutTimer: private int logoutTimer
+    // TODO login.login.employee.employee: public employee.employee currEmployee
 
 
 
@@ -20,13 +20,13 @@ public class Login {
     // METHODS:
     // PUBLIC:
 
-    //TODO Login.Login.login()
-    // used to login an Employee.Employee, gets username and password and checks the login
+    //TODO login.login.login()
+    // used to login an employee.employee, gets username and password and checks the login
     public Boolean login(){
         return true;
     }
 
-    //TODO Login.Login.logout()
+    //TODO login.login.logout()
     public Boolean logout(){
         return true;
     }
@@ -35,13 +35,13 @@ public class Login {
 
     // PRIVATE:
 
-    //TODO Login.Login.checkLogin()
+    //TODO login.login.checkLogin()
     //checks in Database if entered username and password are correct
     private Boolean checkLogin(){
         return true;
     }
 
-    //TODO Login.Login.AutoLogout()
+    //TODO login.login.AutoLogout()
     private void autoLogout(){
 
     }

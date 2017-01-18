@@ -14,7 +14,7 @@ abstract class Customer {
     public String communication;            // ways to contact a customer.customer
     public String customerClass;            // v=vip, a=better/profit>3500, b=normal/profit>1000, p=potential customer, z=not worthy
     public String customerType;             // VN=Versicherungsnehmer, VP=versicherte Person, BZ=Beitragszahler
-    public Employee consultant;             // Employee.Employee responsible for the customer.customer
+    public Employee consultant;             // employee.employee responsible for the customer.customer
 
     // TODO customer.customer.attributes
     protected Document listedDocuments[];
