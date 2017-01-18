@@ -29,12 +29,15 @@ public class Login {
     // METHODS:
     // PUBLIC:
 
-    // used to login an employee.employee, gets username and password and checks the login
+    // used to login an Employee, gets username and password and checks the login
     public Boolean login(){
         DatabaseController dBConLogin = new DatabaseController();
         String returnedPassword = dBConLogin.searchLogin(this.username);
 
         if(returnedPassword.equals(this.password)){
+            // change status to logged in
+            this.isLoggedIn = true;
+
             //true: get employee with username
             this.currEmployee = dBConLogin.searchEmployee(this.username);
             return true;
@@ -45,6 +48,11 @@ public class Login {
         }
     }
 
+    // returns the status of the current Login
+    public Boolean getIsLoggedIn(){
+        return isLoggedIn;
+    }
+
     //TODO login.login.logout()
     public Boolean logout(){
         return true;
@@ -53,12 +61,6 @@ public class Login {
 
 
     // PRIVATE:
-
-    //TODO login.login.checkLogin()
-    //checks in Database if entered username and password are correct
-    private Boolean checkLogin(){
-        return true;
-    }
 
     //TODO login.login.AutoLogout()
     private void autoLogout(){
