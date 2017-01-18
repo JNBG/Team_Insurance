@@ -1,6 +1,7 @@
 package insurance;
 
 import java.util.Calendar;
+import damage.Damage;
 
 /**
  * Created by Joscha on 04.01.2017.
@@ -21,7 +22,7 @@ abstract class Insurance {
     public Calendar endDate;
     public float currentBalance;
     protected Damage relatedDamages[];
-    public int contactID
+    public int contactID;
 
     //Methods
     //add new damage.damage to related insurance.insurance
@@ -29,7 +30,7 @@ abstract class Insurance {
     public Damage[] newDamage(){
         //TODO fill array
         //damage.damage [] arr =
-        return arr;
+        return null;
     }
 
     //edit damage.damage
@@ -49,6 +50,6 @@ abstract class Insurance {
     public Damage[] getRelatedDamage (){
         //TODO fill array
         //damage.damage [] arr =
-        return arr;
+        return null;
     }
 }

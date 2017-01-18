@@ -1,5 +1,17 @@
 package customer;
 
+import java.util.Objects;
+import employee.Employee;
+import document.Document;
+import insurance.BuildingInsurance;
+import insurance.CarInsurance;
+import insurance.CompanyPensionScheme;
+import insurance.EquipmentInsurance;
+import insurance.FleetInsurance;
+import insurance.GroupAccidentInsurance;
+import insurance.HealthInsurance;
+
+
 /**
  * Created by Philipp on 04.01.2017.
  */
@@ -18,7 +30,7 @@ abstract class Customer {
 
     // TODO customer.customer.attributes
     protected Document listedDocuments[];
-    protected Insurence insurenceList[];
+    protected Objects insurenceList[];
 
 
 
@@ -41,7 +53,7 @@ abstract class Customer {
 
     }
 
-    public Insurence[] getInsurenceList() {
+    public Objects[] getInsurenceList() {
         return insurenceList;
     }
 

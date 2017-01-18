@@ -12,7 +12,7 @@ public class Employee {
     //Attributes
     public String name;
     public String lastName;
-    public String status:
+    public String status;
     public String role;
     public String agency;
     public int empID;

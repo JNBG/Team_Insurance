@@ -1,9 +1,12 @@
 package databasecontroller;
 
+import java.util.Objects;
+import employee.Employee;
+import damage.Damage;
+
 import customer.CustomerPerson;
 import customer.CustomerEnterprise;
 import document.Document;
-import insurance.Insurance;
 
 
 /**
@@ -13,36 +16,46 @@ public class DatabaseController {
     public DatabaseController() {
     }
 
-    private Login resultLogin;
+
     private Employee resultEmployee;
     private CustomerPerson[] resultsCustomerPerson;
     private CustomerEnterprise[] resultsCustomerEnterprise;
-    private Insurance[] resultsInsurance;
+    private Objects[] resultsInsurance;
     private Document[] resultsDocument;
     private Damage[] resultsDamage;
 
-    public boolean searchLogin(){
-        return true;
+    public String searchLogin(String username){
+        // TODO try catch (get password from DB)
+        // Search in DB for username and return password if user is found else Error
+        String password = "whatevs";
+        return password;
     }
 
-    public Employee searchEmployee(){
-
+    public Employee searchEmployee(String username){
+        // TODO try catch (get employee with 'username' from DB)
+        // Search in DB for Employee with name 'username'
+        Employee searchedEmployee = new Employee();
+        return searchedEmployee;
     }
 
-    public Customer[] searchCustomer(){
-
+    public CustomerPerson[] searchCustomerPerson(){
+        return null;
     }
 
-    public Insurance[] searchInsurance(){
+    public CustomerEnterprise[] searchCustomerEnterprise(){
+        return null;
+    }
 
+    public Objects[] searchInsurance(){
+        return null;
     }
 
     public Document[] searchDokument(){
-
+        return null;
     }
 
     public Damage[] searchDamage(){
-
+        return null;
     }
 
 }
