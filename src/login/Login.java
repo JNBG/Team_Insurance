@@ -1,3 +1,7 @@
+/**
+ *  Used to log in an Employee
+ */
+
 package login;
 
 import employee.Employee;
