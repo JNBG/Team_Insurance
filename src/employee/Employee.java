@@ -9,6 +9,15 @@ public class Employee {
     public Employee() {
     }
 
+    public Employee(String name, String lastName, String status, String role, String agency, int empID){
+        this.name = name;
+        this.lastName = lastName;
+        this.status = status;
+        this.role = role;
+        this.agency = agency;
+        this.empID = empID;
+    }
+
     //Attributes
     public String name;
     public String lastName;
@@ -16,8 +25,8 @@ public class Employee {
     public String role;
     public String agency;
     public int empID;
-    //TODO: private customer.CustomerPerson currCustPers
-    //TODO: private customer.CustomerEnterprise currCustEnt
+    //TODO: private customer.CustomerPerson currCustPerson
+    //TODO: private customer.CustomerEnterprise currCustEnterprise
 
     //Methods
     //add customer.customer to employee
