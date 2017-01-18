@@ -1,8 +1,10 @@
-package DatabaseController;
+package databasecontroller;
 
-import Customer.Customer;
-import Document.Document;
-import Insurance.Insurance;
+import customer.CustomerPerson;
+import customer.CustomerEnterprise;
+import document.Document;
+import insurance.Insurance;
+
 
 /**
  * Created by Philipp on 04.01.2017.
@@ -13,7 +15,8 @@ public class DatabaseController {
 
     private Login resultLogin;
     private Employee resultEmployee;
-    private Customer[] resultsCustomer;
+    private CustomerPerson[] resultsCustomerPerson;
+    private CustomerEnterprise[] resultsCustomerEnterprise;
     private Insurance[] resultsInsurance;
     private Document[] resultsDocument;
     private Damage[] resultsDamage;
