@@ -1,8 +1,8 @@
 /**
  * Created by Philipp on 04.01.2017.
  */
-public class DatabaseConstroller {
-    public DatabaseConstroller() {
+public class DatabaseController {
+    public DatabaseController() {
     }
 
     private Login resultLogin;
