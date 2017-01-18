@@ -16,5 +16,5 @@ public class CarInsurance extends Insurance {
     public int mileage;
     public int estMileage;
     public int tuev;
-    public driverList [] registeredDrivers;
+    public String[] registeredDrivers;
 }

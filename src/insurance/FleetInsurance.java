@@ -15,7 +15,8 @@ public class FleetInsurance extends Insurance {
     //Methods
     //TODO implement method
     public CarInsurance[] getCarList() {
-        return CarInsurance[];
+
+        return null;
     }
 
     //TODO implement method
