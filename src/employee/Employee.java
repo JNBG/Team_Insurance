@@ -30,7 +30,6 @@ public class Employee {
     public int empID;
     public CustomerPerson currCustPerson;
     public CustomerEnterprise currCustEnterprise;
-    public String keyword;
 
     /**
      * Creates a new Customer with given information
