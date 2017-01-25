@@ -78,8 +78,6 @@ public class Employee {
         return true;
     }
 
-    //add new search.search for objects associated with employee.employee
-    //TODO: create method
     public Boolean searchCustomer(String keyword){
         Search searchCustomer = new Search();
         searchCustomer.searchCustomer(keyword);
