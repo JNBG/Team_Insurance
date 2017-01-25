@@ -3,14 +3,15 @@
  */
 package customer;
 
-import java.util.Calendar;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class CustomerEnterprise extends Customer {
     public CustomerEnterprise() {
     }
 
     public String enterpriseName;
-    public Calendar foundingDate;
+    public Date foundingDate;
     public int annualRevenue;
     public int employeeCount;
     public String typeOfEnterprise;
