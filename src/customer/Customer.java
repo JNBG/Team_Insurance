@@ -4,7 +4,6 @@
 package customer;
 
 import java.util.Objects;
-import employee.Employee;
 import document.Document;
 import insurance.BuildingInsurance;
 import insurance.CarInsurance;
@@ -19,6 +18,17 @@ abstract class Customer {
     public Customer() {
     }
 
+    public Customer(String cCity, int cZip, String cStreetName, int cHouseNumber, String cCommunication, String cCustomerClass, String cCustomerType, int empID){
+        this.city = cCity;
+        this.zip = cZip;
+        this.streetName = cStreetName;
+        this.houseNumber = cHouseNumber;
+        this.communication = cCommunication;
+        this.customerClass = cCustomerClass;
+        this.customerType = cCustomerType;
+        this.consultant = empID;
+    }
+
     public String city;
     public int zip;
     public String streetName;
@@ -26,7 +36,7 @@ abstract class Customer {
     public String communication;            // ways to contact a customer.customer
     public String customerClass;            // v=vip, a=better/profit>3500, b=normal/profit>1000, p=potential customer, z=not worthy
     public String customerType;             // VN=Versicherungsnehmer, VP=versicherte Person, BZ=Beitragszahler
-    public Employee consultant;             // employee.employee responsible for the customer.customer
+    public int consultant;                  // empID of Employee responsible for the customer
 
     // TODO customer.customer.attributes
     protected Document listedDocuments[];
