@@ -87,15 +87,19 @@ public class Employee {
         return true;
     }
 
-    //Acquires corresponding customer.customer-Person of employee.employee
-    //TODO: create method
-    public Boolean GetCurrCustPerson (){
-        return true;
+    /**
+     *
+     * @return the Person working on. null if no Person assigned
+     */
+    public CustomerPerson GetCurrCustPerson (){
+        return currCustPerson;
     }
 
-    //Acquires corresponding customer.customer-Enterprise of employee.employee
-    //TODO: create method
-    public Boolean GetCurrCustEnt (){
-        return true;
+    /**
+     *
+     * @return the Enterprise working on. null if no Enterprise assigned
+     */
+    public CustomerEnterprise GetCurrCustEnt (){
+        return currCustEnterprise;
     }
 }
