@@ -40,7 +40,7 @@ public class Search {
             } else if (checkPerson[arrayPos].consultant == Integer.parseInt(keyword)) {
                 searchPersonResults.add(checkPerson[arrayPos]);
             }
-            resultsCustomerPerson = searchPersonResults.toArray(resultsCustomerPerson);
+            searchPersonResults.toArray(resultsCustomerPerson);
         }
 
 
@@ -67,7 +67,7 @@ public class Search {
             } else if (checkEnterprise[arrayPos].consultant == Integer.parseInt(keyword)) {
                 searchEnterpriseResults.add(checkEnterprise[arrayPos]);
             }
-            resultsCustomerEnterprise = searchEnterpriseResults.toArray(resultsCustomerEnterprise);
+            searchEnterpriseResults.toArray(resultsCustomerEnterprise);
         }
 
         return null;

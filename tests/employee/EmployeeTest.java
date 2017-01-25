@@ -26,7 +26,7 @@ public class EmployeeTest {
     @Test
     public void searchCustomer() throws Exception {
         Employee Birgit = new Employee();
-        assertTrue(Birgit.searchCustomer("Max"));
+        assertTrue(Birgit.searchCustomer("Erfurt"));
 
     }
 
