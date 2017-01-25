@@ -72,4 +72,12 @@ public class Search {
 
         return null;
     }
+
+    public CustomerPerson[] getResultsCustomerPerson() {
+        return resultsCustomerPerson;
+    }
+
+    public CustomerEnterprise[] getResultsCustomerEnterprise() {
+        return resultsCustomerEnterprise;
+    }
 }

@@ -81,8 +81,13 @@ public class Employee {
     public Boolean searchCustomer(String keyword){
         Search searchCustomer = new Search();
         searchCustomer.searchCustomer(keyword);
-
-        return true;
+        if (searchCustomer.getResultsCustomerPerson() != null){
+            return true;
+        } else if (searchCustomer.getResultsCustomerEnterprise() != null){
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
