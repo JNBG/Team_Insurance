@@ -3,9 +3,12 @@
  */
 package employee;
 
+import customer.CustomerPerson;
+import customer.CustomerEnterprise;
+
+
 //List of all employed Persons
 public class Employee {
-    //Constructor
     public Employee() {
     }
 
@@ -18,17 +21,15 @@ public class Employee {
         this.empID = empID;
     }
 
-    //Attributes
     public String name;
     public String lastName;
     public String status;
     public String role;
     public String agency;
     public int empID;
-    //TODO: private customer.CustomerPerson currCustPerson
-    //TODO: private customer.CustomerEnterprise currCustEnterprise
+    public CustomerPerson currCustPerson;
+    public CustomerEnterprise currCustEnterprise;
 
-    //Methods
     //add customer.customer to employee
     //TODO: Needs customer.customer-Attributes from customer.customer Class
     public Boolean newCustomer (){

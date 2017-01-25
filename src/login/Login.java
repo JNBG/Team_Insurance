@@ -68,7 +68,6 @@ public class Login {
 
 
     //TODO Login.AutoLogout()
-
     /**
      * Logs out the current Employee after n Minutes of Idletime
      */
