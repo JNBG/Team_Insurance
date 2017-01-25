@@ -58,10 +58,6 @@ public class DatabaseController {
                 searchPersonResults.add(checkPerson[arrayPos]);
             } else if (checkPerson[arrayPos].lastName.equals(keyword)) {
                 searchPersonResults.add(checkPerson[arrayPos]);
-            } else if (checkPerson[arrayPos].birthdate.equals(keyword)) {
-                searchPersonResults.add(checkPerson[arrayPos]);
-            } else if (checkPerson[arrayPos].relationshipStatus.equals(keyword)) {
-                searchPersonResults.add(checkPerson[arrayPos]);
             } else if (checkPerson[arrayPos].city.equals(keyword)) {
                 searchPersonResults.add(checkPerson[arrayPos]);
             } else if (checkPerson[arrayPos].zip == Integer.parseInt(keyword)) {
@@ -70,11 +66,7 @@ public class DatabaseController {
                 searchPersonResults.add(checkPerson[arrayPos]);
             }  else if (checkPerson[arrayPos].houseNumber == Integer.parseInt(keyword)) {
                 searchPersonResults.add(checkPerson[arrayPos]);
-            } else if (checkPerson[arrayPos].communication.equals(keyword)) {
-                searchPersonResults.add(checkPerson[arrayPos]);
             } else if (checkPerson[arrayPos].customerClass.equals(keyword)) {
-                searchPersonResults.add(checkPerson[arrayPos]);
-            } else if (checkPerson[arrayPos].customerType.equals(keyword)) {
                 searchPersonResults.add(checkPerson[arrayPos]);
             } else if (checkPerson[arrayPos].consultant == Integer.parseInt(keyword)) {
                 searchPersonResults.add(checkPerson[arrayPos]);
@@ -98,12 +90,6 @@ public class DatabaseController {
         for (int arrayPos = 0; arrayPos <= entSize; arrayPos++) {
             if (checkEnterprise[arrayPos].enterpriseName.equals(keyword)) {
                 searchEnterpriseResults.add(checkEnterprise[arrayPos]);
-            } else if (checkEnterprise[arrayPos].foundingDate.equals(keyword)) {
-                searchEnterpriseResults.add(checkEnterprise[arrayPos]);
-            } else if (checkEnterprise[arrayPos].annualRevenue == Integer.parseInt(keyword)) {
-                searchEnterpriseResults.add(checkEnterprise[arrayPos]);
-            } else if (checkEnterprise[arrayPos].employeeCount == Integer.parseInt(keyword)) {
-                searchEnterpriseResults.add(checkEnterprise[arrayPos]);
             } else if (checkEnterprise[arrayPos].typeOfEnterprise.equals(keyword)) {
                 searchEnterpriseResults.add(checkEnterprise[arrayPos]);
             } else if (checkEnterprise[arrayPos].city.equals(keyword)) {
@@ -114,11 +100,7 @@ public class DatabaseController {
                 searchEnterpriseResults.add(checkEnterprise[arrayPos]);
             }  else if (checkEnterprise[arrayPos].houseNumber == Integer.parseInt(keyword)) {
                 searchEnterpriseResults.add(checkEnterprise[arrayPos]);
-            } else if (checkEnterprise[arrayPos].communication.equals(keyword)) {
-                searchEnterpriseResults.add(checkEnterprise[arrayPos]);
             } else if (checkEnterprise[arrayPos].customerClass.equals(keyword)) {
-                searchEnterpriseResults.add(checkEnterprise[arrayPos]);
-            } else if (checkEnterprise[arrayPos].customerType.equals(keyword)) {
                 searchEnterpriseResults.add(checkEnterprise[arrayPos]);
             } else if (checkEnterprise[arrayPos].consultant == Integer.parseInt(keyword)) {
                 searchEnterpriseResults.add(checkEnterprise[arrayPos]);
