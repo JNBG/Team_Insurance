@@ -85,9 +85,9 @@ public class DatabaseController {
     }
 
     public CustomerEnterprise searchCustomerEnterprise(String keyword){
-        CustomerEnterprise EnterpriseDummy1 = new CustomerEnterprise();
-        CustomerEnterprise EnterpriseDummy2 = new CustomerEnterprise();
-        CustomerEnterprise EnterpriseDummy3 = new CustomerEnterprise();
+        CustomerEnterprise EnterpriseDummy1 = new CustomerEnterprise("MaxTech", "01.02.2001", 500000, 5, "GmbH", "Erfurt", 99085, "ElisenStraße", 1 ,"Phone: 46372/4384672 Email: MaxTech@mail.de", "v", "VN VP BZ", 1);
+        CustomerEnterprise EnterpriseDummy2 = new CustomerEnterprise("InsuranceTeam", "08.11.2016", 100000000, 2, "AG", "Erfurt", 99085, "Altonaer Straße", 25 ,"noch nichts hehe :D", "v", "VN VP BZ", 2);
+        CustomerEnterprise EnterpriseDummy3 = new CustomerEnterprise("Google Inc", "04.09.1998", 160000000, 200000, "INC", "Mountain View", 94035, "California State Route", 85 ,"Das kann man ja wohl googeln :P", "v", "VN VP BZ", 1);
 
         CustomerEnterprise[] checkEnterprise = {EnterpriseDummy1, EnterpriseDummy2, EnterpriseDummy3};
 
