@@ -45,7 +45,7 @@ public class DatabaseController {
     public CustomerPerson[] searchCustomerPerson(String keyword) {
         CustomerPerson PersonDummy1 = new CustomerPerson("Max", "Mustermann", "01.01.1990", "single", "Erfurt", 9986, "Badstraße", 1, "12345/6789", "p", "vn, vp, bz", 1);
         CustomerPerson PersonDummy2 = new CustomerPerson("Monika", "Musterfrau", "20.01.1990", "married", "Berlin", 10115, "Turmstraße", 1, "10115/4321", "v", "vn, vp, bz", 2);
-        CustomerPerson PersonDummy3 = new CustomerPerson("Hans", "Zimmer", "12.09.1957", "single", "Frankfurt am Main", 60308, "Elisenstraße", 28, "60308/4562", "p", "vn, vp, bz", 1);
+        CustomerPerson PersonDummy3 = new CustomerPerson("Hans", "Zimmer", "12.09.1957", "single", "Frankfurt am Main", 60308, "Chaussestraße", 28, "60308/4562", "p", "vn, vp, bz", 1);
 
         CustomerPerson[] checkPerson = {PersonDummy1, PersonDummy2, PersonDummy3};
 
@@ -58,10 +58,6 @@ public class DatabaseController {
                 searchPersonResults.add(checkPerson[arrayPos]);
             } else if (checkPerson[arrayPos].lastName.equals(keyword)) {
                 searchPersonResults.add(checkPerson[arrayPos]);
-            } else if (checkPerson[arrayPos].birthdate.equals(keyword)) {
-                searchPersonResults.add(checkPerson[arrayPos]);
-            } else if (checkPerson[arrayPos].relationshipStatus.equals(keyword)) {
-                searchPersonResults.add(checkPerson[arrayPos]);
             } else if (checkPerson[arrayPos].city.equals(keyword)) {
                 searchPersonResults.add(checkPerson[arrayPos]);
             } else if (checkPerson[arrayPos].zip == Integer.parseInt(keyword)) {
@@ -70,11 +66,7 @@ public class DatabaseController {
                 searchPersonResults.add(checkPerson[arrayPos]);
             }  else if (checkPerson[arrayPos].houseNumber == Integer.parseInt(keyword)) {
                 searchPersonResults.add(checkPerson[arrayPos]);
-            } else if (checkPerson[arrayPos].communication.equals(keyword)) {
-                searchPersonResults.add(checkPerson[arrayPos]);
             } else if (checkPerson[arrayPos].customerClass.equals(keyword)) {
-                searchPersonResults.add(checkPerson[arrayPos]);
-            } else if (checkPerson[arrayPos].customerType.equals(keyword)) {
                 searchPersonResults.add(checkPerson[arrayPos]);
             } else if (checkPerson[arrayPos].consultant == Integer.parseInt(keyword)) {
                 searchPersonResults.add(checkPerson[arrayPos]);
@@ -84,10 +76,10 @@ public class DatabaseController {
             return this.resultsCustomerPerson;
     }
 
-    public CustomerEnterprise searchCustomerEnterprise(String keyword){
-        CustomerEnterprise EnterpriseDummy1 = new CustomerEnterprise("MaxTech", "01.02.2001", 500000, 5, "GmbH", "Erfurt", 99085, "ElisenStraße", 1 ,"Phone: 46372/4384672 Email: MaxTech@mail.de", "v", "VN VP BZ", 1);
-        CustomerEnterprise EnterpriseDummy2 = new CustomerEnterprise("InsuranceTeam", "08.11.2016", 100000000, 2, "AG", "Erfurt", 99085, "Altonaer Straße", 25 ,"noch nichts hehe :D", "v", "VN VP BZ", 2);
-        CustomerEnterprise EnterpriseDummy3 = new CustomerEnterprise("Google Inc", "04.09.1998", 160000000, 200000, "INC", "Mountain View", 94035, "California State Route", 85 ,"Das kann man ja wohl googeln :P", "v", "VN VP BZ", 1);
+    public CustomerEnterprise[] searchCustomerEnterprise(String keyword){
+        CustomerEnterprise EnterpriseDummy1 = new CustomerEnterprise();
+        CustomerEnterprise EnterpriseDummy2 = new CustomerEnterprise();
+        CustomerEnterprise EnterpriseDummy3 = new CustomerEnterprise();
 
         CustomerEnterprise[] checkEnterprise = {EnterpriseDummy1, EnterpriseDummy2, EnterpriseDummy3};
 
@@ -95,7 +87,27 @@ public class DatabaseController {
 
         List<CustomerEnterprise> searchEnterpriseResults = new ArrayList<CustomerEnterprise>();
 
-        for (int arrayPos = 0; arrayPos <= entSize; arrayPos++) {}
+        for (int arrayPos = 0; arrayPos <= entSize; arrayPos++) {
+            if (checkEnterprise[arrayPos].enterpriseName.equals(keyword)) {
+                searchEnterpriseResults.add(checkEnterprise[arrayPos]);
+            } else if (checkEnterprise[arrayPos].typeOfEnterprise.equals(keyword)) {
+                searchEnterpriseResults.add(checkEnterprise[arrayPos]);
+            } else if (checkEnterprise[arrayPos].city.equals(keyword)) {
+                searchEnterpriseResults.add(checkEnterprise[arrayPos]);
+            } else if (checkEnterprise[arrayPos].zip == Integer.parseInt(keyword)) {
+                searchEnterpriseResults.add(checkEnterprise[arrayPos]);
+            } else if (checkEnterprise[arrayPos].streetName.equals(keyword)) {
+                searchEnterpriseResults.add(checkEnterprise[arrayPos]);
+            }  else if (checkEnterprise[arrayPos].houseNumber == Integer.parseInt(keyword)) {
+                searchEnterpriseResults.add(checkEnterprise[arrayPos]);
+            } else if (checkEnterprise[arrayPos].customerClass.equals(keyword)) {
+                searchEnterpriseResults.add(checkEnterprise[arrayPos]);
+            } else if (checkEnterprise[arrayPos].consultant == Integer.parseInt(keyword)) {
+                searchEnterpriseResults.add(checkEnterprise[arrayPos]);
+            }
+                searchEnterpriseResults.toArray(resultsCustomerEnterprise);
+        }
+        return this.resultsCustomerEnterprise;
     }
 
     public Objects[] searchInsurance(){
