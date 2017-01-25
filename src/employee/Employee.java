@@ -5,6 +5,7 @@ package employee;
 
 import customer.CustomerPerson;
 import customer.CustomerEnterprise;
+import databasecontroller.DatabaseController;
 
 
 //List of all employed Persons
@@ -29,6 +30,7 @@ public class Employee {
     public int empID;
     public CustomerPerson currCustPerson;
     public CustomerEnterprise currCustEnterprise;
+    public String keyword;
 
     //add customer.customer to employee
     //TODO: Needs customer.customer-Attributes from customer.customer Class
@@ -44,7 +46,11 @@ public class Employee {
 
     //add new search.search for objects associated with employee.employee
     //TODO: create method
-    public Boolean newSearch(){
+    public Boolean newSearch(String keyword){
+        DatabaseController dBConEmp = new DatabaseController();
+        dBConEmp.searchCustomerPerson(keyword);
+        dBConEmp.searchCustomerEnterprise(keyword);
+
         return true;
     }
 

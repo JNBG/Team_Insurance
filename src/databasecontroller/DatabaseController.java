@@ -3,6 +3,7 @@
  */
 package databasecontroller;
 
+import java.util.ArrayList;
 import java.util.Objects;
 import employee.Employee;
 import damage.Damage;
@@ -10,6 +11,7 @@ import damage.Damage;
 import customer.CustomerPerson;
 import customer.CustomerEnterprise;
 import document.Document;
+import org.omg.PortableInterceptor.ORBInitInfoPackage.DuplicateName;
 
 
 public class DatabaseController {
@@ -23,6 +25,7 @@ public class DatabaseController {
     private Objects[] resultsInsurance;
     private Document[] resultsDocument;
     private Damage[] resultsDamage;
+
 
     public String searchLogin(String username){
         // TODO try catch (get password from DB)
@@ -38,12 +41,27 @@ public class DatabaseController {
         return searchedEmployee;
     }
 
-    public CustomerPerson[] searchCustomerPerson(){
-        return null;
+    public CustomerPerson[] searchCustomerPerson(String keyword){
+        //TODO : Fill Dummys
+        CustomerPerson Dummy1 = new CustomerPerson();
+        CustomerPerson Dummy2 = new CustomerPerson();
+        CustomerPerson Dummy3 = new CustomerPerson();
+
+       CustomerPerson[] checkPerson = {Dummy1, Dummy2, Dummy3};
+
+        int size = checkPerson.length;
+
+        for (int arrayPos = 0; arrayPos <= size; arrayPos++){
+            if(checkPerson[arrayPos].name.equals(keyword)){
+                resultsCustomerPerson =
+        }
+        }
+    return this.resultsCustomerPerson;
     }
 
-    public CustomerEnterprise[] searchCustomerEnterprise(){
-        return null;
+    public CustomerEnterprise searchCustomerEnterprise(String keyword){
+        CustomerEnterprise searchedEnterprise = new CustomerEnterprise();
+        return searchedEnterprise;
     }
 
     public Objects[] searchInsurance(){
