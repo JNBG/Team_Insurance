@@ -56,7 +56,7 @@ public class Employee {
      *
      * @param cEnterpriseName String: Name of the Enterprise
      * @param cFoundingDate String: Founding Date ('dd.mm.yyyy')
-     * @param cAnnualRevenue int in €
+     * @param cAnnualRevenue double in €
      * @param cEmployeeCount int
      * @param cTypeOfEnterprise duno
      * @param cCity city where currently registered
@@ -66,7 +66,7 @@ public class Employee {
      * @param cCustomerType VN=Versicherungsnehmer, VP=versicherte Person, BZ=Beitragszahler
      * @return bool if creation was successful
      */
-    public Boolean newCustomerEnterprise (String cEnterpriseName, String cFoundingDate, int cAnnualRevenue, int cEmployeeCount, String cTypeOfEnterprise, String cCity, int cZip, String cStreetName, int cHouseNumber, String cCommunication, String cCustomerClass, String cCustomerType){
+    public Boolean newCustomerEnterprise (String cEnterpriseName, String cFoundingDate, double cAnnualRevenue, int cEmployeeCount, String cTypeOfEnterprise, String cCity, int cZip, String cStreetName, int cHouseNumber, String cCommunication, String cCustomerClass, String cCustomerType){
         CustomerEnterprise newCE = new CustomerEnterprise(cEnterpriseName, cFoundingDate, cAnnualRevenue, cEmployeeCount, cTypeOfEnterprise, cCity, cZip, cStreetName, cHouseNumber ,cCommunication, cCustomerClass, cCustomerType, this.empID);
         this.currCustEnterprise = newCE;
         this.currCustPerson = null;

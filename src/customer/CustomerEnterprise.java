@@ -11,7 +11,7 @@ public class CustomerEnterprise extends Customer {
     public CustomerEnterprise() {
     }
 
-    public CustomerEnterprise (String cEnterpriseName, String cFoundingDate, int cAnnualRevenue, int cEmployeeCount, String cTypeOfEnterprise, String cCity, int cZip, String cStreetName, int cHouseNumber, String cCommunication, String cCustomerClass, String cCustomerType, int empID){
+    public CustomerEnterprise (String cEnterpriseName, String cFoundingDate, double cAnnualRevenue, int cEmployeeCount, String cTypeOfEnterprise, String cCity, int cZip, String cStreetName, int cHouseNumber, String cCommunication, String cCustomerClass, String cCustomerType, int empID){
         super(cCity, cZip, cStreetName, cHouseNumber ,cCommunication, cCustomerClass, cCustomerType, empID);
         this.enterpriseName = cEnterpriseName;
         try {
@@ -28,7 +28,7 @@ public class CustomerEnterprise extends Customer {
 
     public String enterpriseName;
     public Date foundingDate;
-    public int annualRevenue;
+    public double annualRevenue;
     public int employeeCount;
     public String typeOfEnterprise;
 }
