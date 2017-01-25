@@ -1,5 +1,5 @@
 /**
- *  Used to log in an Employee
+ *  Used to log in an employee
  */
 
 package login;
@@ -29,7 +29,7 @@ public class Login {
 
 
     /**
-     * Used to login an Employee
+     * Used to login an employee
      * returns true if this.password matches the password given by the DatabaseController. Else returns false
      * */
     public Boolean login(){
@@ -55,7 +55,7 @@ public class Login {
     }
 
     /**
-     * Logs out the current Employee
+     * Logs out the current employee
      * returns void
      * makes this instance useless
      */
@@ -69,7 +69,7 @@ public class Login {
 
     //TODO Login.AutoLogout()
     /**
-     * Logs out the current Employee after n Minutes of Idletime
+     * Logs out the current employee after n Minutes of Idletime
      */
     private void autoLogout(){
 

@@ -35,7 +35,7 @@ public class DatabaseController {
 
     public Employee searchEmployee(String username){
         // TODO try catch (get employee with 'username' from DB)
-        // Search in DB for Employee with name 'username'
+        // Search in DB for employee with name 'username'
         Employee searchedEmployee = new Employee();
         return searchedEmployee;
     }
