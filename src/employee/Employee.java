@@ -5,7 +5,7 @@ package employee;
 
 import customer.CustomerPerson;
 import customer.CustomerEnterprise;
-import databasecontroller.DatabaseController;
+import search.Search;
 
 
 //List of all employed Persons
@@ -81,10 +81,9 @@ public class Employee {
 
     //add new search.search for objects associated with employee.employee
     //TODO: create method
-    public Boolean newSearch(String keyword){
-        DatabaseController dBConEmp = new DatabaseController();
-        dBConEmp.searchCustomerPerson(keyword);
-        dBConEmp.searchCustomerEnterprise(keyword);
+    public Boolean searchCustomer(String keyword){
+        Search searchCustomer = new Search();
+        searchCustomer.searchCustomer(keyword);
 
         return true;
     }
