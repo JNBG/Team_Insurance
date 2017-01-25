@@ -5,13 +5,6 @@ package customer;
 
 import java.util.Objects;
 import document.Document;
-import insurance.BuildingInsurance;
-import insurance.CarInsurance;
-import insurance.CompanyPensionScheme;
-import insurance.EquipmentInsurance;
-import insurance.FleetInsurance;
-import insurance.GroupAccidentInsurance;
-import insurance.HealthInsurance;
 
 
 abstract class Customer {
@@ -40,7 +33,7 @@ abstract class Customer {
 
     // TODO customer.customer.attributes
     protected Document listedDocuments[];
-    protected Objects insurenceList[];
+    protected Objects insuranceList[];
 
 
 
@@ -63,8 +56,8 @@ abstract class Customer {
 
     }
 
-    public Objects[] getInsurenceList() {
-        return insurenceList;
+    public Objects[] getInsuranceList() {
+        return insuranceList;
     }
 
     public Document[] getListedDocuments() {

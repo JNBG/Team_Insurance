@@ -9,6 +9,13 @@ public class CompanyEmployee{
     public CompanyEmployee() {
     }
 
+    public CompanyEmployee(String exName, String exLastName, int exEmpID, int exRetirementBenefit) {
+        this.name = exName;
+        this.lastName = exLastName;
+        this.empID = exEmpID;
+        this.retirementBenefit = exRetirementBenefit;
+    }
+
     //Attributes
     public String name;
     public String lastName;
