@@ -4,6 +4,7 @@
 package databasecontroller;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import employee.Employee;
 import damage.Damage;
@@ -41,27 +42,60 @@ public class DatabaseController {
         return searchedEmployee;
     }
 
-    public CustomerPerson[] searchCustomerPerson(String keyword){
-        //TODO : Fill Dummys
-        CustomerPerson Dummy1 = new CustomerPerson();
-        CustomerPerson Dummy2 = new CustomerPerson();
-        CustomerPerson Dummy3 = new CustomerPerson();
+    public CustomerPerson[] searchCustomerPerson(String keyword) {
+        CustomerPerson PersonDummy1 = new CustomerPerson("Max", "Mustermann", "01.01.1990", "single", "Erfurt", 9986, "Badstraße", 1, "12345/6789", "p", "vn, vp, bz", 1);
+        CustomerPerson PersonDummy2 = new CustomerPerson("Monika", "Musterfrau", "20.01.1990", "married", "Berlin", 10115, "Turmstraße", 1, "10115/4321", "v", "vn, vp, bz", 2);
+        CustomerPerson PersonDummy3 = new CustomerPerson("Hans", "Zimmer", "12.09.1957", "single", "Frankfurt am Main", 60308, "Elisenstraße", 28, "60308/4562", "p", "vn, vp, bz", 1);
 
-       CustomerPerson[] checkPerson = {Dummy1, Dummy2, Dummy3};
+        CustomerPerson[] checkPerson = {PersonDummy1, PersonDummy2, PersonDummy3};
 
-        int size = checkPerson.length;
+        int personSize = checkPerson.length;
 
-        for (int arrayPos = 0; arrayPos <= size; arrayPos++){
-            if(checkPerson[arrayPos].name.equals(keyword)){
-                resultsCustomerPerson =
+        List<CustomerPerson> searchPersonResults = new ArrayList<CustomerPerson>();
+
+        for (int arrayPos = 0; arrayPos <= personSize; arrayPos++) {
+            if (checkPerson[arrayPos].name.equals(keyword)) {
+                searchPersonResults.add(checkPerson[arrayPos]);
+            } else if (checkPerson[arrayPos].lastName.equals(keyword)) {
+                searchPersonResults.add(checkPerson[arrayPos]);
+            } else if (checkPerson[arrayPos].birthdate.equals(keyword)) {
+                searchPersonResults.add(checkPerson[arrayPos]);
+            } else if (checkPerson[arrayPos].relationshipStatus.equals(keyword)) {
+                searchPersonResults.add(checkPerson[arrayPos]);
+            } else if (checkPerson[arrayPos].city.equals(keyword)) {
+                searchPersonResults.add(checkPerson[arrayPos]);
+            } else if (checkPerson[arrayPos].zip == Integer.parseInt(keyword)) {
+                searchPersonResults.add(checkPerson[arrayPos]);
+            } else if (checkPerson[arrayPos].streetName.equals(keyword)) {
+                searchPersonResults.add(checkPerson[arrayPos]);
+            }  else if (checkPerson[arrayPos].houseNumber == Integer.parseInt(keyword)) {
+                searchPersonResults.add(checkPerson[arrayPos]);
+            } else if (checkPerson[arrayPos].communication.equals(keyword)) {
+                searchPersonResults.add(checkPerson[arrayPos]);
+            } else if (checkPerson[arrayPos].customerClass.equals(keyword)) {
+                searchPersonResults.add(checkPerson[arrayPos]);
+            } else if (checkPerson[arrayPos].customerType.equals(keyword)) {
+                searchPersonResults.add(checkPerson[arrayPos]);
+            } else if (checkPerson[arrayPos].consultant == Integer.parseInt(keyword)) {
+                searchPersonResults.add(checkPerson[arrayPos]);
+            }
+            searchPersonResults.toArray(resultsCustomerPerson);
         }
-        }
-    return this.resultsCustomerPerson;
+            return this.resultsCustomerPerson;
     }
 
     public CustomerEnterprise searchCustomerEnterprise(String keyword){
-        CustomerEnterprise searchedEnterprise = new CustomerEnterprise();
-        return searchedEnterprise;
+        CustomerEnterprise EnterpriseDummy1 = new CustomerEnterprise();
+        CustomerEnterprise EnterpriseDummy2 = new CustomerEnterprise();
+        CustomerEnterprise EnterpriseDummy3 = new CustomerEnterprise();
+
+        CustomerEnterprise[] checkEnterprise = {EnterpriseDummy1, EnterpriseDummy2, EnterpriseDummy3};
+
+        int entSize = checkEnterprise.length;
+
+        List<CustomerEnterprise> searchEnterpriseResults = new ArrayList<CustomerEnterprise>();
+
+        for (int arrayPos = 0; arrayPos <= entSize; arrayPos++) {}
     }
 
     public Objects[] searchInsurance(){
