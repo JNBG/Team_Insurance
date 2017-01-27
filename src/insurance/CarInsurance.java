@@ -1,11 +1,32 @@
-package insurance;
-
 /**
- * Created by Joscha on 04.01.2017.
+ *
  */
+package insurance;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 //Subclass for Car-Insurances
 public class CarInsurance extends Insurance {
     public CarInsurance() {
+    }
+
+    public CarInsurance(String iLicensePlate, String iBrand, String iModel, int iBuildYear, int iMileage, int iEstMileage, String iTuev, String[] iRegisteredDrivers, String iCustomerType, String iInsuranceType, String iName, Boolean iActive, String iStartDate, String iEndDate, Float iCurrentBalance, int iContactID){
+        super(iCustomerType, iInsuranceType, iName, iActive, iStartDate, iEndDate, iCurrentBalance, iContactID);
+        this.licensePlate = iLicensePlate;
+        this.brand = iBrand;
+        this.model = iModel;
+        this.buildYear = iBuildYear;
+        this.mileage = iMileage;
+        this.estMileage = iEstMileage;
+        try {
+            SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
+            this.tuev = formatter.parse(iTuev);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        //TODO: check because Array
+        this.registeredDrivers = iRegisteredDrivers;
     }
 
     //Attributes
@@ -15,6 +36,6 @@ public class CarInsurance extends Insurance {
     public int buildYear;
     public int mileage;
     public int estMileage;
-    public int tuev;
+    public Date tuev;
     public String[] registeredDrivers;
 }

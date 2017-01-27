@@ -4,9 +4,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by Philipp on 18.01.2017.
- */
 public class LoginTest {
     @Test
     public void loginSuccess() throws Exception {
@@ -20,5 +17,20 @@ public class LoginTest {
         assertFalse(Paul.login());
     }
 
+    /* ###ZU TRIVIAL?###
+    @Test
+    public void loginCheck() throws Exception {
+        Login Max = new Login("Max", "whatevs");
+        Max.login();
+        assertTrue(Max.getIsLoggedIn());
+    }
+    */
 
+    @Test
+    public void logout () throws Exception {
+        Login Max = new Login("Max", "whatevs");
+        Max.login();
+        Max.logout();
+        assertFalse(Max.getIsLoggedIn());
+    }
 }

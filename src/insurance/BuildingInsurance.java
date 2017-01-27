@@ -1,19 +1,30 @@
+/**
+ *
+ */
 package insurance;
 
-/**
- * Created by Joscha on 04.01.2017.
- */
 
 //Subclass for Building-Insurances
 public class BuildingInsurance extends Insurance{
     public BuildingInsurance() {
     }
 
+    public BuildingInsurance (String iCity, int iZip, String iStreetName, int iHouseNumber, String iScope, Float iValue, String iRiskValue, String iCustomerType, String iInsuranceType, String iName, Boolean iActive, String iStartDate, String iEndDate, Float iCurrentBalance, int iContactID){
+        super(iCustomerType, iInsuranceType, iName, iActive, iStartDate, iEndDate, iCurrentBalance, iContactID);
+        this.city = iCity;
+        this.zip = iZip;
+        this.streetName = iStreetName;
+        this.houseNumber = iHouseNumber;
+        this.scope = iScope;
+        this.value = iValue;
+        this.riskValue = iRiskValue;
+    }
+
     //Attributes
     public String city;
     public int zip;
     public String streetName;
-    public String houseNumber;
+    public int houseNumber;
     public String scope;        //Summary of all buildings additional to the building (Garage, Garden, etc.)
     public float value;
     public String riskValue;

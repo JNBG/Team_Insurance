@@ -1,11 +1,13 @@
+/**
+ *
+ */
 package insurance;
 
-import java.util.Calendar;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import damage.Damage;
 
-/**
- * Created by Joscha on 04.01.2017.
- */
 
 //Parent-Class for all Insurances
 abstract class Insurance {
@@ -18,11 +20,33 @@ abstract class Insurance {
     public String insuranceType;
     public String name;
     public Boolean active;
-    public Calendar startDate;
-    public Calendar endDate;
+    public Date startDate;
+    public Date endDate;
     public float currentBalance;
+    //TODO: add Damage-List to constructor
     protected Damage relatedDamages[];
     public int contactID;
+
+    public Insurance(String iCustomerType, String iInsuranceType, String iName, Boolean iActive, String iStartDate, String iEndDate, Float iCurrentBalance, int iContactID){
+        this.customerType = iCustomerType;
+        this.insuranceType = iInsuranceType;
+        this.name = iName;
+        this.active = iActive;
+        try {
+            SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
+            this.startDate = formatter.parse(iStartDate);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        try {
+            SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
+            this.endDate = formatter.parse(iEndDate);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        this.currentBalance = iCurrentBalance;
+        this.contactID = iContactID;
+    }
 
     //Methods
     //add new damage.damage to related insurance.insurance
