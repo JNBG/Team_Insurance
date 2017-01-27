@@ -25,9 +25,9 @@ abstract class Insurance {
     public float currentBalance;
     //TODO: add Damage-List to constructor
     protected Damage relatedDamages[];
-    public int contactID;
+    public int contractID;
 
-    public Insurance(String iCustomerType, String iInsuranceType, String iName, Boolean iActive, String iStartDate, String iEndDate, Float iCurrentBalance, int iContactID){
+    public Insurance(String iCustomerType, String iInsuranceType, String iName, Boolean iActive, String iStartDate, String iEndDate, Float iCurrentBalance, int iContractID){
         this.customerType = iCustomerType;
         this.insuranceType = iInsuranceType;
         this.name = iName;
@@ -45,7 +45,7 @@ abstract class Insurance {
             e.printStackTrace();
         }
         this.currentBalance = iCurrentBalance;
-        this.contactID = iContactID;
+        this.contractID = iContractID;
     }
 
     //Methods
