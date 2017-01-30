@@ -72,21 +72,37 @@ public class Employee {
         return true;
     }
 
-    //edit a customer.customer of an employee
+    //edit a customer of an employee
     //TODO: create method
     public Boolean editCustomer (){
         return true;
     }
 
-    public Boolean searchCustomer(String keyword){
+
+    /**
+     * Does new Search in Customers with given Keyword
+     * @param keyword searchterm for matches in CustomerPersons and CustomerEnterprises
+     * @return an Obj[] of resulted search
+     */
+    public Object[] searchCustomer(String keyword){
+        boolean foundPerson = false;
+        boolean foundEnterprise = false;
+
+
         Search searchCustomer = new Search();
         searchCustomer.searchCustomer(keyword);
-        if (searchCustomer.getResultsCustomerPerson() != null){
-            return true;
-        } else if (searchCustomer.getResultsCustomerEnterprise() != null){
-            return true;
+
+        if (searchCustomer.getResultsCustomerPerson().length != 0){
+            foundPerson = true;
+        }
+        if (searchCustomer.getResultsCustomerEnterprise().length != 0){
+            foundEnterprise = true;
+        }
+
+        if (foundPerson == false && foundEnterprise == false){
+            return new Object[]{null};
         } else {
-            return false;
+            return new Object[]{searchCustomer.getResultsCustomerPerson(),searchCustomer.getResultsCustomerEnterprise()};
         }
     }
 
