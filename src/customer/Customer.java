@@ -27,10 +27,10 @@ abstract class Customer {
     public int zip;
     public String streetName;
     public int houseNumber;
-    public String communication;            // ways to contact a customer.customer
-    public String customerClass;            // v=vip, a=better/profit>3500, b=normal/profit>1000, p=potential customer, z=not worthy
-    public String customerType;             // VN=Versicherungsnehmer, VP=versicherte Person, BZ=Beitragszahler
-    public int consultant;                  // empID of employee responsible for the customer
+    public String communication;
+    public String customerClass;
+    public String customerType;
+    public int consultant;
     public BuildingInsurance currBI;
     public CarInsurance currCI;
     public CompanyPensionScheme currCPS;

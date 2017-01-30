@@ -49,11 +49,9 @@ abstract class Insurance {
     }
 
     //Methods
-    //add new damage.damage to related insurance.insurance
+    //add new damage to related insurance
     //TODO implement method. Try/Catch? or Boolean?
     public Damage[] newDamage(){
-        //TODO fill array
-        //damage.damage [] arr =
         return null;
     }
 
