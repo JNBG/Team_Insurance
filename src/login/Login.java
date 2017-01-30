@@ -67,7 +67,7 @@ public class Login {
     }
 
 
-    //TODO Login.AutoLogout()
+    //TODO Login.AutoLogout() NOT NEEDED WITH SESSIONS - ADDED IN NEXT SEMESTER
     /**
      * Logs out the current employee after n Minutes of Idletime
      */

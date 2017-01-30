@@ -41,6 +41,8 @@ public class Damage {
         this.reserve = dReserve;
     }
 
+
+
     public String description;
     public String relatedCustomerName;
     public int relatedContractID;
