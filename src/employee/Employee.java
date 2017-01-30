@@ -72,12 +72,18 @@ public class Employee {
         return true;
     }
 
-    //edit a customer.customer of an employee
+    //edit a customer of an employee
     //TODO: create method
     public Boolean editCustomer (){
         return true;
     }
 
+
+    /**
+     * Does new Search in Customers with given Keyword
+     * @param keyword searchterm for matches in CustomerPersons and CustomerEnterprises
+     * @return an Obj[] of resulted search
+     */
     public Object[] searchCustomer(String keyword){
         boolean foundPerson = false;
         boolean foundEnterprise = false;
