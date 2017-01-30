@@ -78,15 +78,25 @@ public class Employee {
         return true;
     }
 
-    public Boolean searchCustomer(String keyword){
+    public Object[] searchCustomer(String keyword){
+        boolean foundPerson = false;
+        boolean foundEnterprise = false;
+
+
         Search searchCustomer = new Search();
         searchCustomer.searchCustomer(keyword);
-        if (searchCustomer.getResultsCustomerPerson() != null){
-            return true;
-        } else if (searchCustomer.getResultsCustomerEnterprise() != null){
-            return true;
+
+        if (searchCustomer.getResultsCustomerPerson().length != 0){
+            foundPerson = true;
+        }
+        if (searchCustomer.getResultsCustomerEnterprise().length != 0){
+            foundEnterprise = true;
+        }
+
+        if (foundPerson == false && foundEnterprise == false){
+            return new Object[]{null};
         } else {
-            return false;
+            return new Object[]{searchCustomer.getResultsCustomerPerson(),searchCustomer.getResultsCustomerEnterprise()};
         }
     }
 
