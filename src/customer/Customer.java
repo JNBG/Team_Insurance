@@ -22,7 +22,6 @@ abstract class Customer {
         this.customerType = cCustomerType;
         this.consultant = empID;
     }
-
     public String city;
     public int zip;
     public String streetName;

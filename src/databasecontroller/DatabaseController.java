@@ -41,7 +41,7 @@ public class DatabaseController {
     }
 
     public CustomerPerson[] searchCustomerPerson() {
-        CustomerPerson PersonDummy1 = new CustomerPerson("Max", "Mustermann", "01.01.1990", "single", "Erfurt", 9986, "Badstraße", 1, "12345/6789", "p", "vn, vp, bz", 1);
+        CustomerPerson PersonDummy1 = new CustomerPerson("Max", "Mustermann", "01.01.1990", "single", "Erfurt", 99086, "Badstraße", 1, "12345/6789", "p", "vn, vp, bz", 1);
         CustomerPerson PersonDummy2 = new CustomerPerson("Monika", "Musterfrau", "20.01.1990", "married", "Berlin", 10115, "Turmstraße", 1, "10115/4321", "v", "vn, vp, bz", 2);
         CustomerPerson PersonDummy3 = new CustomerPerson("Hans", "Zimmer", "12.09.1957", "single", "Frankfurt am Main", 60308, "Chaussestraße", 28, "60308/4562", "p", "vn, vp, bz", 1);
         CustomerPerson PersonDummy4 = new CustomerPerson("Anakin","Skywalker", "31.01.102", "single again", "Mustafar Planet", 1, "Vaders Street", 1, "Force Choking", "v", "vn, vp, bz", 9);

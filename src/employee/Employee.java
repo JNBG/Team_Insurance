@@ -8,7 +8,7 @@ import customer.CustomerEnterprise;
 import search.Search;
 
 
-//List of all employed Persons
+
 public class Employee {
     public Employee() {
     }
@@ -72,9 +72,19 @@ public class Employee {
         return true;
     }
 
-    //edit a customer of an employee
-    //TODO: create method
-    public Boolean editCustomer (){
+    //edit a customerPerson of an employee
+    public Boolean editCustomerPerson (String cName, String cLastName, String cBirthday, String cRelationshipStatus, String cCity, int cZip, String cStreetName, int cHouseNumber, String cCommunication, String cCustomerClass, String cCustomerType){
+        if(currCustPerson != null){
+            currCustPerson = new CustomerPerson(cName, cLastName, cBirthday, cRelationshipStatus, cCity, cZip, cStreetName, cHouseNumber ,cCommunication, cCustomerClass, cCustomerType, this.empID);
+        }
+        return true;
+    }
+
+    //edit a customerEnterprise of an employee
+    public Boolean editCustomerEnterprise (String cEnterpriseName, String cFoundingDate, double cAnnualRevenue, int cEmployeeCount, String cTypeOfEnterprise, String cCity, int cZip, String cStreetName, int cHouseNumber, String cCommunication, String cCustomerClass, String cCustomerType){
+        if(currCustEnterprise != null){
+            currCustEnterprise = new CustomerEnterprise(cEnterpriseName, cFoundingDate, cAnnualRevenue, cEmployeeCount, cTypeOfEnterprise, cCity, cZip, cStreetName, cHouseNumber ,cCommunication, cCustomerClass, cCustomerType, this.empID);
+        }
         return true;
     }
 
