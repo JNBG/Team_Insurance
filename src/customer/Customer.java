@@ -37,15 +37,8 @@ abstract class Customer {
     public FleetInsurance currFI;
     public GroupAccidentInsurance currGAI;
     public HealthInsurance currHI;
-
-    // TODO customer.customer.attributes
     protected Document listedDocuments[];
     protected Objects insuranceList[];
-
-
-
-    // METHODS:
-    // PUBLIC:
 
      /**
       * PARAMETERS USED BY ALL INSURANCES
@@ -187,14 +180,17 @@ abstract class Customer {
         return true;
     }
 
+    // TODO: edit Insurance
     public void editInsurance(){
 
     }
 
+    // TODO: new Document
     public Boolean newDocument(){
         return true;
     }
 
+    // TODO: edit Document
     public void editDocument(){
 
     }

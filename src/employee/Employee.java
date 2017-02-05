@@ -5,6 +5,7 @@ package employee;
 
 import customer.CustomerPerson;
 import customer.CustomerEnterprise;
+import databasecontroller.DatabaseController;
 import search.Search;
 
 
@@ -72,20 +73,65 @@ public class Employee {
         return true;
     }
 
-    //edit a customerPerson of an employee
+    /**
+     *
+     * @param cName
+     * @param cLastName
+     * @param cBirthday
+     * @param cRelationshipStatus
+     * @param cCity
+     * @param cZip
+     * @param cStreetName
+     * @param cHouseNumber
+     * @param cCommunication
+     * @param cCustomerClass
+     * @param cCustomerType
+     * @return true if change was successful in the DB, false otherwise
+     */
+    // TODO: write Test
     public Boolean editCustomerPerson (String cName, String cLastName, String cBirthday, String cRelationshipStatus, String cCity, int cZip, String cStreetName, int cHouseNumber, String cCommunication, String cCustomerClass, String cCustomerType){
-        if(currCustPerson != null){
-            currCustPerson = new CustomerPerson(cName, cLastName, cBirthday, cRelationshipStatus, cCity, cZip, cStreetName, cHouseNumber ,cCommunication, cCustomerClass, cCustomerType, this.empID);
+        if(currCustPerson != null && currCustEnterprise == null){
+            DatabaseController changeCuDB = new DatabaseController();
+            CustomerPerson changedCustomer = new CustomerPerson(cName, cLastName, cBirthday, cRelationshipStatus, cCity, cZip, cStreetName, cHouseNumber ,cCommunication, cCustomerClass, cCustomerType, this.empID);
+            if(changeCuDB.changeCustomerPerson(changedCustomer)){
+                currCustPerson = changedCustomer;
+                return true;
+            } else {
+                return false;
+            }
         }
-        return true;
+        return false;
     }
 
-    //edit a customerEnterprise of an employee
+    /**
+     *
+     * @param cEnterpriseName
+     * @param cFoundingDate
+     * @param cAnnualRevenue
+     * @param cEmployeeCount
+     * @param cTypeOfEnterprise
+     * @param cCity
+     * @param cZip
+     * @param cStreetName
+     * @param cHouseNumber
+     * @param cCommunication
+     * @param cCustomerClass
+     * @param cCustomerType
+     * @return true if change was successful in the DB, false otherwise
+     */
+    // TODO: write Test
     public Boolean editCustomerEnterprise (String cEnterpriseName, String cFoundingDate, double cAnnualRevenue, int cEmployeeCount, String cTypeOfEnterprise, String cCity, int cZip, String cStreetName, int cHouseNumber, String cCommunication, String cCustomerClass, String cCustomerType){
-        if(currCustEnterprise != null){
-            currCustEnterprise = new CustomerEnterprise(cEnterpriseName, cFoundingDate, cAnnualRevenue, cEmployeeCount, cTypeOfEnterprise, cCity, cZip, cStreetName, cHouseNumber ,cCommunication, cCustomerClass, cCustomerType, this.empID);
+        if(currCustEnterprise != null && currCustPerson == null){
+            DatabaseController changeCuDB = new DatabaseController();
+            CustomerEnterprise changedCustomer = new CustomerEnterprise(cEnterpriseName, cFoundingDate, cAnnualRevenue, cEmployeeCount, cTypeOfEnterprise, cCity, cZip, cStreetName, cHouseNumber ,cCommunication, cCustomerClass, cCustomerType, this.empID);
+            if (changeCuDB.changeCustomerEnterprise(changedCustomer)){
+                currCustEnterprise = changedCustomer;
+                return true;
+            } else {
+                return false;
+            }
         }
-        return true;
+        return false;
     }
 
 

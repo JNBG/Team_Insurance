@@ -73,4 +73,28 @@ public class DatabaseController {
         return null;
     }
 
+
+
+    // TODO: Implement database change
+    public boolean changeCustomerEnterprise(CustomerEnterprise changedCustomer){
+        // try catch, when db ist implemented
+        // try (){
+        // change Customer in DB
+        return true;
+        // } catch {
+        // return false;
+        // }
+    }
+
+    // TODO: Implement database change
+    public boolean changeCustomerPerson(CustomerPerson changedCustomer){
+        // try catch, when db ist implemented
+        // try (){
+        // change Customer in DB
+        return true;
+        // } catch {
+        // return false;
+        // }
+    }
+
 }
