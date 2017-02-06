@@ -1,5 +1,5 @@
 /**
- * The Parent Customer-Class defines the base data used by both Persons and Customers.
+ * The Parent Customer-Class defines the base data used by both Persons and Enterprises.
  * All Methods for adding a new Insurance of any kind to a Customer are used here.
  * The corresponding Insurances can also be edited here.
  * Adding and editing new documents is also done here.
