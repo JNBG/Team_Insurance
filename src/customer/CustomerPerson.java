@@ -11,8 +11,8 @@ public class CustomerPerson extends Customer {
     public CustomerPerson() {
     }
 
-    public CustomerPerson(String cName, String cLastName, String cBirthday, String cRelationshipStatus, String cCity, int cZip, String cStreetName, int cHouseNumber, String cCommunication, String cCustomerClass, String cCustomerType, int empID) {
-        super(cCity, cZip, cStreetName, cHouseNumber ,cCommunication, cCustomerClass, cCustomerType, empID);
+    public CustomerPerson(String cName, String cLastName, String cBirthday, String cRelationshipStatus, int cCustomerID, String cCity, int cZip, String cStreetName, int cHouseNumber, String cCommunication, String cCustomerClass, String cCustomerType, int empID) {
+        super(cCustomerID, cCity, cZip, cStreetName, cHouseNumber ,cCommunication, cCustomerClass, cCustomerType, empID);
         this.name = cName;
         this.lastName = cLastName;
         try {

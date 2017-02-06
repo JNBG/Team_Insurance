@@ -12,7 +12,8 @@ abstract class Customer {
     public Customer() {
     }
 
-    public Customer(String cCity, int cZip, String cStreetName, int cHouseNumber, String cCommunication, String cCustomerClass, String cCustomerType, int empID){
+    public Customer(int cCustomerID, String cCity, int cZip, String cStreetName, int cHouseNumber, String cCommunication, String cCustomerClass, String cCustomerType, int empID){
+        this.customerID = cCustomerID;
         this.city = cCity;
         this.zip = cZip;
         this.streetName = cStreetName;
@@ -22,6 +23,7 @@ abstract class Customer {
         this.customerType = cCustomerType;
         this.consultant = empID;
     }
+    public int customerID;
     public String city;
     public int zip;
     public String streetName;

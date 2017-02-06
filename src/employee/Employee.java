@@ -38,6 +38,7 @@ public class Employee {
      * @param cLastName Lastname of the new Customer
      * @param cBirthday Birthday in format 'dd.mm.yyyy'
      * @param cRelationshipStatus married, single,...
+     * @param cCustomerID unique CustomerID
      * @param cCity city where currently registered
      * @param cZip zip of current city
      * @param cCommunication ways to contact the Customer
@@ -45,8 +46,8 @@ public class Employee {
      * @param cCustomerType VN=Versicherungsnehmer, VP=versicherte Person, BZ=Beitragszahler
      * @return bool if creation was successful
      */
-    public Boolean newCustomerPerson (String cName, String cLastName, String cBirthday, String cRelationshipStatus, String cCity, int cZip, String cStreetName, int cHouseNumber, String cCommunication, String cCustomerClass, String cCustomerType){
-        CustomerPerson newCP = new CustomerPerson(cName, cLastName, cBirthday, cRelationshipStatus, cCity, cZip, cStreetName, cHouseNumber ,cCommunication, cCustomerClass, cCustomerType, this.empID);
+    public Boolean newCustomerPerson (String cName, String cLastName, String cBirthday, String cRelationshipStatus, int cCustomerID, String cCity, int cZip, String cStreetName, int cHouseNumber, String cCommunication, String cCustomerClass, String cCustomerType){
+        CustomerPerson newCP = new CustomerPerson(cName, cLastName, cBirthday, cRelationshipStatus, cCustomerID, cCity, cZip, cStreetName, cHouseNumber ,cCommunication, cCustomerClass, cCustomerType, this.empID);
         this.currCustPerson = newCP;
         this.currCustEnterprise = null;
         return true;
@@ -59,6 +60,7 @@ public class Employee {
      * @param cAnnualRevenue double in €
      * @param cEmployeeCount Amount of working employees
      * @param cTypeOfEnterprise duno TODO: ADD answer by Lukas
+     * @param cCustomerID unique CustomerID
      * @param cCity city where currently registered
      * @param cZip zip of current city
      * @param cCommunication ways to contact the Customer
@@ -66,8 +68,8 @@ public class Employee {
      * @param cCustomerType VN=Versicherungsnehmer, VP=versicherte Person, BZ=Beitragszahler
      * @return bool if creation was successful
      */
-    public Boolean newCustomerEnterprise (String cEnterpriseName, String cFoundingDate, double cAnnualRevenue, int cEmployeeCount, String cTypeOfEnterprise, String cCity, int cZip, String cStreetName, int cHouseNumber, String cCommunication, String cCustomerClass, String cCustomerType){
-        CustomerEnterprise newCE = new CustomerEnterprise(cEnterpriseName, cFoundingDate, cAnnualRevenue, cEmployeeCount, cTypeOfEnterprise, cCity, cZip, cStreetName, cHouseNumber ,cCommunication, cCustomerClass, cCustomerType, this.empID);
+    public Boolean newCustomerEnterprise (String cEnterpriseName, String cFoundingDate, double cAnnualRevenue, int cEmployeeCount, String cTypeOfEnterprise, int cCustomerID, String cCity, int cZip, String cStreetName, int cHouseNumber, String cCommunication, String cCustomerClass, String cCustomerType){
+        CustomerEnterprise newCE = new CustomerEnterprise(cEnterpriseName, cFoundingDate, cAnnualRevenue, cEmployeeCount, cTypeOfEnterprise, cCustomerID, cCity, cZip, cStreetName, cHouseNumber ,cCommunication, cCustomerClass, cCustomerType, this.empID);
         this.currCustEnterprise = newCE;
         this.currCustPerson = null;
         return true;
@@ -89,10 +91,10 @@ public class Employee {
      * @return true if change was successful in the DB, false otherwise
      */
     // TODO: write Test
-    public Boolean editCustomerPerson (String cName, String cLastName, String cBirthday, String cRelationshipStatus, String cCity, int cZip, String cStreetName, int cHouseNumber, String cCommunication, String cCustomerClass, String cCustomerType){
+    public Boolean editCustomerPerson (String cName, String cLastName, String cBirthday, String cRelationshipStatus, int cCustomerID, String cCity, int cZip, String cStreetName, int cHouseNumber, String cCommunication, String cCustomerClass, String cCustomerType){
         if(currCustPerson != null && currCustEnterprise == null){
             DatabaseController changeCuDB = new DatabaseController();
-            CustomerPerson changedCustomer = new CustomerPerson(cName, cLastName, cBirthday, cRelationshipStatus, cCity, cZip, cStreetName, cHouseNumber ,cCommunication, cCustomerClass, cCustomerType, this.empID);
+            CustomerPerson changedCustomer = new CustomerPerson(cName, cLastName, cBirthday, cRelationshipStatus, cCustomerID, cCity, cZip, cStreetName, cHouseNumber ,cCommunication, cCustomerClass, cCustomerType, this.empID);
             if(changeCuDB.changeCustomerPerson(changedCustomer)){
                 currCustPerson = changedCustomer;
                 return true;
@@ -120,10 +122,10 @@ public class Employee {
      * @return true if change was successful in the DB, false otherwise
      */
     // TODO: write Test
-    public Boolean editCustomerEnterprise (String cEnterpriseName, String cFoundingDate, double cAnnualRevenue, int cEmployeeCount, String cTypeOfEnterprise, String cCity, int cZip, String cStreetName, int cHouseNumber, String cCommunication, String cCustomerClass, String cCustomerType){
+    public Boolean editCustomerEnterprise (String cEnterpriseName, String cFoundingDate, double cAnnualRevenue, int cEmployeeCount, String cTypeOfEnterprise, int cCustomerID, String cCity, int cZip, String cStreetName, int cHouseNumber, String cCommunication, String cCustomerClass, String cCustomerType){
         if(currCustEnterprise != null && currCustPerson == null){
             DatabaseController changeCuDB = new DatabaseController();
-            CustomerEnterprise changedCustomer = new CustomerEnterprise(cEnterpriseName, cFoundingDate, cAnnualRevenue, cEmployeeCount, cTypeOfEnterprise, cCity, cZip, cStreetName, cHouseNumber ,cCommunication, cCustomerClass, cCustomerType, this.empID);
+            CustomerEnterprise changedCustomer = new CustomerEnterprise(cEnterpriseName, cFoundingDate, cAnnualRevenue, cEmployeeCount, cTypeOfEnterprise, cCustomerID, cCity, cZip, cStreetName, cHouseNumber ,cCommunication, cCustomerClass, cCustomerType, this.empID);
             if (changeCuDB.changeCustomerEnterprise(changedCustomer)){
                 currCustEnterprise = changedCustomer;
                 return true;
