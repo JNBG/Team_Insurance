@@ -38,6 +38,7 @@ public class Employee {
      * @param cLastName Lastname of the new Customer
      * @param cBirthday Birthday in format 'dd.mm.yyyy'
      * @param cRelationshipStatus married, single,...
+     * @param cCustomerID unique CustomerID
      * @param cCity city where currently registered
      * @param cZip zip of current city
      * @param cCommunication ways to contact the Customer
@@ -45,8 +46,8 @@ public class Employee {
      * @param cCustomerType VN=Versicherungsnehmer, VP=versicherte Person, BZ=Beitragszahler
      * @return bool if creation was successful
      */
-    public Boolean newCustomerPerson (String cName, String cLastName, String cBirthday, String cRelationshipStatus, String cCity, int cZip, String cStreetName, int cHouseNumber, String cCommunication, String cCustomerClass, String cCustomerType){
-        CustomerPerson newCP = new CustomerPerson(cName, cLastName, cBirthday, cRelationshipStatus, cCity, cZip, cStreetName, cHouseNumber ,cCommunication, cCustomerClass, cCustomerType, this.empID);
+    public Boolean newCustomerPerson (String cName, String cLastName, String cBirthday, String cRelationshipStatus, int cCustomerID, String cCity, int cZip, String cStreetName, int cHouseNumber, String cCommunication, String cCustomerClass, String cCustomerType){
+        CustomerPerson newCP = new CustomerPerson(cName, cLastName, cBirthday, cRelationshipStatus, cCustomerID, cCity, cZip, cStreetName, cHouseNumber ,cCommunication, cCustomerClass, cCustomerType, this.empID);
         this.currCustPerson = newCP;
         this.currCustEnterprise = null;
         return true;
@@ -58,6 +59,8 @@ public class Employee {
      * @param cFoundingDate String: Founding Date ('dd.mm.yyyy')
      * @param cAnnualRevenue double in €
      * @param cEmployeeCount Amount of working employees
+     * @param cTypeOfEnterprise sector the enterprise is working in (e.g. IT, Properties, ...)
+     * @param cCustomerID unique CustomerID
      * @param cTypeOfEnterprise short: what does the Enterprise do (List: https://vds.de/ba/a-z/)
      * @param cCity city where currently registered
      * @param cZip zip of current city
