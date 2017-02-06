@@ -59,8 +59,8 @@ public class Employee {
      * @param cFoundingDate String: Founding Date ('dd.mm.yyyy')
      * @param cAnnualRevenue double in €
      * @param cEmployeeCount Amount of working employees
-     * @param cTypeOfEnterprise sector the enterprise is working in (e.g. IT, Properties, ...) TEST
-     * @param cCustomerID unique CustomerID TEST
+     * @param cTypeOfEnterprise short: what does the enterprise do (List: https://vds.de/ba/a-z/)
+     * @param cCustomerID unique CustomerID
      * @param cCity city where currently registered
      * @param cZip zip of current city
      * @param cCommunication ways to contact the Customer
