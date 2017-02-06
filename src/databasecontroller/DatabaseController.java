@@ -52,9 +52,9 @@ public class DatabaseController {
     }
 
     public CustomerEnterprise[] searchCustomerEnterprise(){
-        CustomerEnterprise EnterpriseDummy1 = new CustomerEnterprise("Google", "04.09.1998", 15987654321987.0, 456328, "Inc.",5, "Mountain View", 94035, "Claifornia State Route", 85, "Das kann man ja einfach googlen", "v", "vn, vp, bz", 3);
-        CustomerEnterprise EnterpriseDummy2 = new CustomerEnterprise("InsuranceTeam", "08.11.2016", 5, 2, "iV",6, "Erfurt", 99085, "Altonaer Straße", 25, "Phone:  0361/67000", "v", "vn, vp, bz", 2);
-        CustomerEnterprise EnterpriseDummy3 = new CustomerEnterprise("MaxTech", "04.01.2015", 8745.31, 1, "ltd.",7, "Stockholm", 10012, "Djurgårdsbrunnsvägen", 10, "Email: MaxMustermann@swedenmail.se", "p", "vn, vp, bz", 4);
+        CustomerEnterprise EnterpriseDummy1 = new CustomerEnterprise("Google", "04.09.1998", 15987654321987.0, 456328, "IT",5, "Mountain View", 94035, "Claifornia State Route", 85, "Das kann man ja einfach googlen", "v", "vn, vp, bz", 3);
+        CustomerEnterprise EnterpriseDummy2 = new CustomerEnterprise("InsuranceTeam", "08.11.2016", 5, 2, "IT",6, "Erfurt", 99085, "Altonaer Straße", 25, "Phone:  0361/67000", "v", "vn, vp, bz", 2);
+        CustomerEnterprise EnterpriseDummy3 = new CustomerEnterprise("MaxTech", "04.01.2015", 8745.31, 1, "Properties",7, "Stockholm", 10012, "Djurgårdsbrunnsvägen", 10, "Email: MaxMustermann@swedenmail.se", "p", "vn, vp, bz", 4);
 
         CustomerEnterprise[] checkEnterprise = {EnterpriseDummy1, EnterpriseDummy2, EnterpriseDummy3};
 

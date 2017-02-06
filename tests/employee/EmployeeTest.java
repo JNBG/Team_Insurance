@@ -15,7 +15,7 @@ public class EmployeeTest {
     @Test
     public void newCustomerEnterprise() throws Exception {
         Employee EnterpriseTester = new Employee();
-        assertTrue(EnterpriseTester.newCustomerEnterprise("Microsoft","01.02.1970", 245011288.0, 876442, "Inc.", 9, "Mountain View", 87962, "California Street", 45, "Phone: 87965/454213", "p", "vn, vp, bz"));
+        assertTrue(EnterpriseTester.newCustomerEnterprise("Microsoft","01.02.1970", 245011288.0, 876442, "IT", 9, "Mountain View", 87962, "California Street", 45, "Phone: 87965/454213", "p", "vn, vp, bz"));
     }
 
     @Test
