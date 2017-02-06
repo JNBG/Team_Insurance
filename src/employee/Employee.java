@@ -1,5 +1,7 @@
 /**
- *
+ * The Employee-Class is the basic data storage for all Employees of the Insurance Company.
+ * It is also use to add new Customer Persons or Enterprises to a corresponding Employee.
+ * The Employee can also edit both Customer Types in here as well as search for both Types.
  */
 package employee;
 
@@ -34,8 +36,8 @@ public class Employee {
 
     /**
      * Creates a new Customer with given information
-     * @param cName Firstname of the new Customer
-     * @param cLastName Lastname of the new Customer
+     * @param cName First Name of the new Customer
+     * @param cLastName Last Name of the new Customer
      * @param cBirthday Birthday in format 'dd.mm.yyyy'
      * @param cRelationshipStatus married, single,...
      * @param cCustomerID unique CustomerID

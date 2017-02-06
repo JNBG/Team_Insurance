@@ -1,5 +1,6 @@
 /**
- *
+ * Sub-Class for Customer-Person.
+ * Specified Information just used by Persons is defined here.
  * */
 package customer;
 

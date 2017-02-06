@@ -1,5 +1,6 @@
 /**
- *
+ * The Damage-Class is the class defining all types of damages that might appear during the runtime of an Insurance.
+ * The array of damages is then defined in the Insurance-Class
  */
 package damage;
 

@@ -1,5 +1,6 @@
 /**
- *
+ * Sub-Class for Customer-Enterprise.
+ * Specified Information just used by Enterprises is defined here.
  */
 package customer;
 

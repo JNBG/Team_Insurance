@@ -1,5 +1,5 @@
 /**
- *
+ * Basic data-Class for Documents
  */
 package document;
 

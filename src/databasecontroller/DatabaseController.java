@@ -1,10 +1,10 @@
 /**
- *
+ * The Database-Controller is the core-Controller class resembling the basic functionality of the Database.
+ * Currently Dummy's for Unit-Tests are created here. This will later be replaced by the real Database-Connection.
+ * At the moment this class is used for the searchLogin, searchEmployee, searchCustomerPerson and searchCustomerEnterprise
  */
 package databasecontroller;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 import employee.Employee;
 import damage.Damage;
@@ -12,7 +12,6 @@ import damage.Damage;
 import customer.CustomerPerson;
 import customer.CustomerEnterprise;
 import document.Document;
-import org.omg.PortableInterceptor.ORBInitInfoPackage.DuplicateName;
 
 
 public class DatabaseController {
