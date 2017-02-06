@@ -1,5 +1,6 @@
 /**
- *
+ * Subclass to specify the Building insurance
+ * contains all neccessary information for this Insurance
  */
 package insurance;
 
@@ -9,8 +10,8 @@ public class BuildingInsurance extends Insurance{
     public BuildingInsurance() {
     }
 
-    public BuildingInsurance (String iCity, int iZip, String iStreetName, int iHouseNumber, String iScope, Float iValue, String iRiskValue, String iCustomerType, String iInsuranceType, String iName, Boolean iActive, String iStartDate, String iEndDate, Float iCurrentBalance, int iContactID){
-        super(iCustomerType, iInsuranceType, iName, iActive, iStartDate, iEndDate, iCurrentBalance, iContactID);
+    public BuildingInsurance (String iCity, int iZip, String iStreetName, int iHouseNumber, String iScope, Float iValue, String iRiskValue, String iCustomerType, String iInsuranceType, String iName, Boolean iActive, String iStartDate, String iEndDate, Float iCurrentBalance, int iContractID){
+        super(iCustomerType, iInsuranceType, iName, iActive, iStartDate, iEndDate, iCurrentBalance, iContractID);
         this.city = iCity;
         this.zip = iZip;
         this.streetName = iStreetName;

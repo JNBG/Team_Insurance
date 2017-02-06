@@ -1,14 +1,17 @@
 /**
- *
+ * The Employee-Class is the basic data storage for all Employees of the Insurance Company.
+ * It is also use to add new Customer Persons or Enterprises to a corresponding Employee.
+ * The Employee can also edit both Customer Types in here as well as search for both Types.
  */
 package employee;
 
 import customer.CustomerPerson;
 import customer.CustomerEnterprise;
+import databasecontroller.DatabaseController;
 import search.Search;
 
 
-//List of all employed Persons
+
 public class Employee {
     public Employee() {
     }
@@ -33,10 +36,11 @@ public class Employee {
 
     /**
      * Creates a new Customer with given information
-     * @param cName Firstname of the new Customer
-     * @param cLastName Lastname of the new Customer
+     * @param cName First Name of the new Customer
+     * @param cLastName Last Name of the new Customer
      * @param cBirthday Birthday in format 'dd.mm.yyyy'
      * @param cRelationshipStatus married, single,...
+     * @param cCustomerID unique CustomerID
      * @param cCity city where currently registered
      * @param cZip zip of current city
      * @param cCommunication ways to contact the Customer
@@ -44,8 +48,8 @@ public class Employee {
      * @param cCustomerType VN=Versicherungsnehmer, VP=versicherte Person, BZ=Beitragszahler
      * @return bool if creation was successful
      */
-    public Boolean newCustomerPerson (String cName, String cLastName, String cBirthday, String cRelationshipStatus, String cCity, int cZip, String cStreetName, int cHouseNumber, String cCommunication, String cCustomerClass, String cCustomerType){
-        CustomerPerson newCP = new CustomerPerson(cName, cLastName, cBirthday, cRelationshipStatus, cCity, cZip, cStreetName, cHouseNumber ,cCommunication, cCustomerClass, cCustomerType, this.empID);
+    public Boolean newCustomerPerson (String cName, String cLastName, String cBirthday, String cRelationshipStatus, int cCustomerID, String cCity, int cZip, String cStreetName, int cHouseNumber, String cCommunication, String cCustomerClass, String cCustomerType){
+        CustomerPerson newCP = new CustomerPerson(cName, cLastName, cBirthday, cRelationshipStatus, cCustomerID, cCity, cZip, cStreetName, cHouseNumber ,cCommunication, cCustomerClass, cCustomerType, this.empID);
         this.currCustPerson = newCP;
         this.currCustEnterprise = null;
         return true;
@@ -56,8 +60,9 @@ public class Employee {
      * @param cEnterpriseName String: Name of the Enterprise
      * @param cFoundingDate String: Founding Date ('dd.mm.yyyy')
      * @param cAnnualRevenue double in €
-     * @param cEmployeeCount int
-     * @param cTypeOfEnterprise duno
+     * @param cEmployeeCount Amount of working employees
+     * @param cTypeOfEnterprise short: what does the enterprise do (List: https://vds.de/ba/a-z/)
+     * @param cCustomerID unique CustomerID
      * @param cCity city where currently registered
      * @param cZip zip of current city
      * @param cCommunication ways to contact the Customer
@@ -65,28 +70,99 @@ public class Employee {
      * @param cCustomerType VN=Versicherungsnehmer, VP=versicherte Person, BZ=Beitragszahler
      * @return bool if creation was successful
      */
-    public Boolean newCustomerEnterprise (String cEnterpriseName, String cFoundingDate, double cAnnualRevenue, int cEmployeeCount, String cTypeOfEnterprise, String cCity, int cZip, String cStreetName, int cHouseNumber, String cCommunication, String cCustomerClass, String cCustomerType){
-        CustomerEnterprise newCE = new CustomerEnterprise(cEnterpriseName, cFoundingDate, cAnnualRevenue, cEmployeeCount, cTypeOfEnterprise, cCity, cZip, cStreetName, cHouseNumber ,cCommunication, cCustomerClass, cCustomerType, this.empID);
+    public Boolean newCustomerEnterprise (String cEnterpriseName, String cFoundingDate, double cAnnualRevenue, int cEmployeeCount, String cTypeOfEnterprise, int cCustomerID, String cCity, int cZip, String cStreetName, int cHouseNumber, String cCommunication, String cCustomerClass, String cCustomerType){
+        CustomerEnterprise newCE = new CustomerEnterprise(cEnterpriseName, cFoundingDate, cAnnualRevenue, cEmployeeCount, cTypeOfEnterprise, cCustomerID, cCity, cZip, cStreetName, cHouseNumber ,cCommunication, cCustomerClass, cCustomerType, this.empID);
         this.currCustEnterprise = newCE;
         this.currCustPerson = null;
         return true;
     }
 
-    //edit a customer.customer of an employee
-    //TODO: create method
-    public Boolean editCustomer (){
-        return true;
+    /**
+     *
+     * @param cName
+     * @param cLastName
+     * @param cBirthday
+     * @param cRelationshipStatus
+     * @param cCity
+     * @param cZip
+     * @param cStreetName
+     * @param cHouseNumber
+     * @param cCommunication
+     * @param cCustomerClass
+     * @param cCustomerType
+     * @return true if change was successful in the DB, false otherwise
+     */
+    // TODO: write Test
+    public Boolean editCustomerPerson (String cName, String cLastName, String cBirthday, String cRelationshipStatus, int cCustomerID, String cCity, int cZip, String cStreetName, int cHouseNumber, String cCommunication, String cCustomerClass, String cCustomerType){
+        if(currCustPerson != null && currCustEnterprise == null){
+            DatabaseController changeCuDB = new DatabaseController();
+            CustomerPerson changedCustomer = new CustomerPerson(cName, cLastName, cBirthday, cRelationshipStatus, cCustomerID, cCity, cZip, cStreetName, cHouseNumber ,cCommunication, cCustomerClass, cCustomerType, this.empID);
+            if(changeCuDB.changeCustomerPerson(changedCustomer)){
+                currCustPerson = changedCustomer;
+                return true;
+            } else {
+                return false;
+            }
+        }
+        return false;
     }
 
-    public Boolean searchCustomer(String keyword){
+    /**
+     *
+     * @param cEnterpriseName
+     * @param cFoundingDate
+     * @param cAnnualRevenue
+     * @param cEmployeeCount
+     * @param cTypeOfEnterprise
+     * @param cCity
+     * @param cZip
+     * @param cStreetName
+     * @param cHouseNumber
+     * @param cCommunication
+     * @param cCustomerClass
+     * @param cCustomerType
+     * @return true if change was successful in the DB, false otherwise
+     */
+    // TODO: write Test
+    public Boolean editCustomerEnterprise (String cEnterpriseName, String cFoundingDate, double cAnnualRevenue, int cEmployeeCount, String cTypeOfEnterprise, int cCustomerID, String cCity, int cZip, String cStreetName, int cHouseNumber, String cCommunication, String cCustomerClass, String cCustomerType){
+        if(currCustEnterprise != null && currCustPerson == null){
+            DatabaseController changeCuDB = new DatabaseController();
+            CustomerEnterprise changedCustomer = new CustomerEnterprise(cEnterpriseName, cFoundingDate, cAnnualRevenue, cEmployeeCount, cTypeOfEnterprise, cCustomerID, cCity, cZip, cStreetName, cHouseNumber ,cCommunication, cCustomerClass, cCustomerType, this.empID);
+            if (changeCuDB.changeCustomerEnterprise(changedCustomer)){
+                currCustEnterprise = changedCustomer;
+                return true;
+            } else {
+                return false;
+            }
+        }
+        return false;
+    }
+
+
+    /**
+     * Does new Search in Customers with given Keyword
+     * @param keyword searchterm for matches in CustomerPersons and CustomerEnterprises
+     * @return an Obj[] of resulted search
+     */
+    public Object[] searchCustomer(String keyword){
+        boolean foundPerson = false;
+        boolean foundEnterprise = false;
+
+
         Search searchCustomer = new Search();
         searchCustomer.searchCustomer(keyword);
-        if (searchCustomer.getResultsCustomerPerson() != null){
-            return true;
-        } else if (searchCustomer.getResultsCustomerEnterprise() != null){
-            return true;
+
+        if (searchCustomer.getResultsCustomerPerson().length != 0){
+            foundPerson = true;
+        }
+        if (searchCustomer.getResultsCustomerEnterprise().length != 0){
+            foundEnterprise = true;
+        }
+
+        if (foundPerson == false && foundEnterprise == false){
+            return new Object[]{null};
         } else {
-            return false;
+            return new Object[]{searchCustomer.getResultsCustomerPerson(),searchCustomer.getResultsCustomerEnterprise()};
         }
     }
 

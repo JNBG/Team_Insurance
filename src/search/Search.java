@@ -1,5 +1,5 @@
 /**
- *
+ * The Search-Class uses the Database-Controller Customer-Dummy's to search for a corresponding entry after a keyword defined in the Test-Class.
  */
 package search;
 import customer.*;
@@ -15,7 +15,7 @@ public class Search {
     private CustomerPerson[] resultsCustomerPerson;
     private CustomerEnterprise[] resultsCustomerEnterprise;
 
-    public boolean searchCustomer(String keyword){
+    public void searchCustomer(String keyword){
         DatabaseController CustPersonDB = new DatabaseController();
         CustomerPerson[] checkPerson = CustPersonDB.searchCustomerPerson();
         int personSize = checkPerson.length;
@@ -39,6 +39,8 @@ public class Search {
                 searchPersonResults.add(checkPerson[arrayPos]);
             } else if (String.valueOf(checkPerson[arrayPos].consultant).equals(keyword)) {
                 searchPersonResults.add(checkPerson[arrayPos]);
+            } else{
+
             }
         }
         resultsCustomerPerson = new CustomerPerson[searchPersonResults.size()];
@@ -66,11 +68,12 @@ public class Search {
                 searchEnterpriseResults.add(checkEnterprise[arrayPos]);
             } else if (String.valueOf(checkEnterprise[arrayPos].consultant).equals(keyword)) {
                 searchEnterpriseResults.add(checkEnterprise[arrayPos]);
+            } else{
+
             }
         }
         resultsCustomerEnterprise = new CustomerEnterprise[searchEnterpriseResults.size()];
         resultsCustomerEnterprise = searchEnterpriseResults.toArray(resultsCustomerEnterprise);
-        return true;
     }
 
     public CustomerPerson[] getResultsCustomerPerson() {

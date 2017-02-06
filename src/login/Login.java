@@ -1,5 +1,5 @@
 /**
- *  Used to log in an employee
+ *  Used to log in an employee and vice versa to log him out again. Also connected later with sessions for an auto-logout after an idle-Time
  */
 
 package login;
@@ -18,8 +18,8 @@ public class Login {
 
 
 
-        public Login() {
-        }
+    public Login() {
+    }
 
     public Login(String username, String password){
         this.username = username;
@@ -67,7 +67,7 @@ public class Login {
     }
 
 
-    //TODO Login.AutoLogout()
+    //TODO Login.AutoLogout() NOT NEEDED WITH SESSIONS - ADDED IN NEXT SEMESTER
     /**
      * Logs out the current employee after n Minutes of Idletime
      */

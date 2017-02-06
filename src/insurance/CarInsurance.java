@@ -1,5 +1,6 @@
 /**
- *
+ * Subclass to specify a Carinsurance
+ * is also used by Fleetinsurance to administrate the Carinsurances for a hole Fleet (e.g. in an Enterprise)
  */
 package insurance;
 import java.text.ParseException;
@@ -11,8 +12,8 @@ public class CarInsurance extends Insurance {
     public CarInsurance() {
     }
 
-    public CarInsurance(String iLicensePlate, String iBrand, String iModel, int iBuildYear, int iMileage, int iEstMileage, String iTuev, String[] iRegisteredDrivers, String iCustomerType, String iInsuranceType, String iName, Boolean iActive, String iStartDate, String iEndDate, Float iCurrentBalance, int iContactID){
-        super(iCustomerType, iInsuranceType, iName, iActive, iStartDate, iEndDate, iCurrentBalance, iContactID);
+    public CarInsurance(String iLicensePlate, String iBrand, String iModel, int iBuildYear, int iMileage, int iEstMileage, String iTuev, String[] iRegisteredDrivers, String iCustomerType, String iInsuranceType, String iName, Boolean iActive, String iStartDate, String iEndDate, Float iCurrentBalance, int iContractID){
+        super(iCustomerType, iInsuranceType, iName, iActive, iStartDate, iEndDate, iCurrentBalance, iContractID);
         this.licensePlate = iLicensePlate;
         this.brand = iBrand;
         this.model = iModel;
