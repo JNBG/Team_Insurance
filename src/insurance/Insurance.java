@@ -23,6 +23,7 @@ abstract class Insurance {
     public Date startDate;
     public Date endDate;
     public float currentBalance;
+
     //TODO: add Damage-List to constructor
     protected Damage relatedDamages[];
     public int contractID;
