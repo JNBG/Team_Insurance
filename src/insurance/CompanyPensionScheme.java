@@ -1,5 +1,6 @@
 /**
- *
+ * Subclass to specify the Company Pension Scheme
+ * it contains an array of the employees of the Enterprise
  */
 package insurance;
 

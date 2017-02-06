@@ -1,5 +1,6 @@
 /**
- *
+ *  Subclass to specify the Equipmentinsurance
+ *  Lists all the Equipment of an Enterprise, which want to be covered
  */
 package insurance;
 

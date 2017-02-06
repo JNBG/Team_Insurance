@@ -1,5 +1,6 @@
 /**
- *
+ *  Subclass to specify the Equipment of an Enterprise
+ *  is used by Equipmentinsurance to list all Equipment
  */
 package insurance;
 

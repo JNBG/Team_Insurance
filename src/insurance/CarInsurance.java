@@ -1,5 +1,6 @@
 /**
- *
+ * Subclass to specify a Carinsurance
+ * is also used by Fleetinsurance to administrate the Carinsurances for a hole Fleet (e.g. in an Enterprise)
  */
 package insurance;
 import java.text.ParseException;

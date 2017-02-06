@@ -1,5 +1,6 @@
 /**
- *
+ * The Parent Insurance-Class defines the basis of the different Insurances
+ * Administrates the Damages related to a certain Insurance
  */
 package insurance;
 

@@ -1,5 +1,6 @@
 /**
- *
+ *  Subclass to specify a Groupaccidentinsurance
+ *  uses CompanyEmployee to accumulate all employees covered by this insurance
  */
 package insurance;
 

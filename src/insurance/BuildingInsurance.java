@@ -1,5 +1,6 @@
 /**
- *
+ * Subclass to specify the Building insurance
+ * contains all neccessary information for this Insurance
  */
 package insurance;
 

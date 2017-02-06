@@ -1,5 +1,7 @@
 /**
- *
+ *  Subclass to specify the Fleetinsurance
+ *  uses Carinsurance to accumulate the insurances for all Vehicles of an Enterprise
+ *  new Carinsurances are added here, they can also be removed here
  */
 package insurance;
 

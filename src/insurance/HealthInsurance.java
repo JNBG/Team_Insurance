@@ -1,5 +1,6 @@
 /**
- *
+ *  Subclass to specify the Healthinsurance
+ *  currently only contains the cooperation partner who provides the Healthinsurance
  */
 package insurance;
 

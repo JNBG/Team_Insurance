@@ -1,5 +1,6 @@
 /**
- *
+ *  Subclass to specify an Company Employee
+ *  is used by CompanyPensionScheme to administrate all employees of the enterprise
  */
 package insurance;
 
