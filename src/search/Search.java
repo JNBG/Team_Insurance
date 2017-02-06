@@ -1,5 +1,5 @@
 /**
- *
+ * The Search-Class uses the Database-Controller Customer-Dummy's to search for a corresponding entry after a keyword defined in the Test-Class.
  */
 package search;
 import customer.*;

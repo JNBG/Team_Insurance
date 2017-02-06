@@ -1,5 +1,5 @@
 /**
- *  Used to log in an employee
+ *  Used to log in an employee and vice versa to log him out again. Also connected later with sessions for an auto-logout after an idle-Time
  */
 
 package login;
