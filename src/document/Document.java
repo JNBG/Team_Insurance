@@ -1,7 +1,7 @@
 /**
  *
  */
-package document;
+package document; 
 
 public class Document {
     public Document() {
